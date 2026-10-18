@@ -1,28 +1,11 @@
 import matplotlib.pyplot as plt
-from matplotlib import colormaps
 from matplotlib.colors import TwoSlopeNorm
 import numpy as np
-from pathlib import Path
 from ase.spectrum.band_structure import get_band_structure, BandStructure
 
 from results import * 
 from config import *
-
-ROOT = Path(__file__).resolve().parent
-
-OUT_DIR = ROOT / "outputs"
-FIG_DIR = OUT_DIR / "figures"
-POTENTIAL_DIR = FIG_DIR / "potential"
-CHARGE_DENSITY_DIR = FIG_DIR / "charge_density"
-DOS_DIR = FIG_DIR / "dos"
-LDOS_DIR = FIG_DIR / "ldos"
-
-FIG_DIR.mkdir(exist_ok=True)
-OUT_DIR.mkdir(exist_ok=True)
-POTENTIAL_DIR.mkdir(exist_ok=True)
-CHARGE_DENSITY_DIR.mkdir(exist_ok=True)
-DOS_DIR.mkdir(exist_ok=True)
-LDOS_DIR.mkdir(exist_ok=True)
+from alignment import *
 
 
 def plot_band_structure(bandpath, energies, name):
@@ -359,7 +342,7 @@ def ldos_individual(results: Results, field, vdw_scheme):
         plt.close(fig)
 
 
-def ldos_subtracted(results: Results, field, vdw_scheme):
+def fermi_ldos_subtracted(results: Results, field, vdw_scheme):
     print(f"PLOTTING FERMI-ALIGNED SUBTRACTED LDOS")
 
     coupled = results.coupled.ldos
@@ -382,7 +365,7 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     
     limit = np.max(np.abs(ldos_subtracted))
     symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
-    mesh = ax.pcolormesh(z, E, ldos_subtracted, cmap="seismic", shading="auto", norm=symmetric_norm)
+    mesh = ax.pcolormesh(z, E, ldos_subtracted * LDOS_WEIGHT, cmap="seismic", shading="auto", norm=symmetric_norm)
     
     fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
     
@@ -397,22 +380,118 @@ def ldos_subtracted(results: Results, field, vdw_scheme):
     plt.close(fig)
 
 
-# def plot_potential(results, field, vdw_scheme):
-#     print("")
-#     potential_subtracted(results, field, vdw_scheme)
-#     potential_individual(results, field, vdw_scheme)
+def vacuum_ldos_subtracted(results: Results, field, vdw_scheme):
+    print("PLOTTING VACUUM-ALIGNED SUBTRACTED LDOS")
+
+    coupled = results.coupled.ldos
+    bottom = results.bottom.ldos
+    top = results.top.ldos
+
+    z = coupled.z
+
+    np.testing.assert_allclose(z, bottom.z)
+    np.testing.assert_allclose(z, top.z)
+
+    # Each system gets its own vacuum-referenced energy axis.
+    _, E_coupled = energy_axes(results.coupled)
+    _, E_bottom = energy_axes(results.bottom)
+    _, E_top = energy_axes(results.top)
+
+    minimum = max(E_coupled.min(), E_bottom.min(), E_top.min(), PLOT_WINDOW_LDOS[0])
+    maximum = min(E_coupled.max(), E_bottom.max(), E_top.max(), PLOT_WINDOW_LDOS[1])
+
+    E = np.arange(minimum, maximum, LDOS_GRID_DELTA_E)
+
+    shape = (len(E), len(z))
+
+    coupled_grid = np.zeros(shape)
+    bottom_grid = np.zeros(shape)
+    top_grid = np.zeros(shape)
+
+    for j in range(len(z)):
+        coupled_grid[:, j] = np.interp(E, E_coupled, coupled.averaged[:, j])
+        bottom_grid[:, j] = np.interp(E, E_bottom, bottom.averaged[:, j])
+        top_grid[:, j] = np.interp(E, E_top, top.averaged[:, j])
+
+    ldos_subtracted = coupled_grid - bottom_grid - top_grid
+
+    fig, ax = plt.subplots()
+
+    limit = np.max(np.abs(ldos_subtracted))
+    symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
+    mesh = ax.pcolormesh(z, E, ldos_subtracted * LDOS_WEIGHT, cmap="seismic", shading="auto", norm=symmetric_norm)
+
+    fig.colorbar(mesh, ax=ax, label=r"$\Delta LDOS$")
+
+    ax.set_title(f"Vacuum-Aligned Subtracted LDOS, E-field={field}au, Correction: {vdw_scheme}")
+
+    ax.set_xlabel(r"$z$ ($\AA$)")
+    ax.set_ylabel(r"E-V_ref (eV)")
+
+    plt.tight_layout()
+    plt.savefig(LDOS_DIR / f"LDOS_Subtracted_Vacuum_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
 
 
-# def plot_charge_density(results, field, vdw_scheme):
-#     charge_density_subtracted(results, field, vdw_scheme)
+def ldos_subtracted(results: Results, field, vdw_scheme):
+    print("PLOTTING FERMI- AND VACUUM-ALIGNED SUBTRACTED LDOS")
 
+    coupled = results.coupled.ldos
+    bottom = results.bottom.ldos
+    top = results.top.ldos
 
-# def plot_dos(results, field, vdw_scheme):
-#     #individual_dos(results, field)
-#     #dos_comparison(results, field)
-#     dos_subtracted(results, field, vdw_scheme)
+    z = coupled.z
 
+    np.testing.assert_allclose(coupled.z, bottom.z)
+    np.testing.assert_allclose(coupled.z, top.z)
 
-# def plot_ldos(results, field, vdw_scheme):
-#     ldos_subtracted(results, field, vdw_scheme)
-#     ldos_individual(results, field, vdw_scheme)
+    # Fermi-alignment
+    E_fermi = coupled.energies
+    mask = (E_fermi >= PLOT_WINDOW_LDOS[0]) & (E_fermi <= PLOT_WINDOW_LDOS[1])
+    E_fermi = E_fermi[mask]
+
+    fermi_subtracted = (coupled.averaged - bottom.averaged - top.averaged)[mask, :]
+
+    # Vacuum-alignment
+    _, E_coupled = energy_axes(results.coupled)
+    _, E_bottom = energy_axes(results.bottom)
+    _, E_top = energy_axes(results.top)
+
+    minimum = max(E_coupled.min(), E_bottom.min(), E_top.min(), PLOT_WINDOW_LDOS[0])
+    maximum = min(E_coupled.max(), E_bottom.max(), E_top.max(), PLOT_WINDOW_LDOS[1])
+
+    E_vacuum = np.arange(minimum, maximum, LDOS_GRID_DELTA_E)
+
+    shape = (len(E_vacuum), len(z))
+
+    coupled_grid = np.zeros(shape)
+    bottom_grid = np.zeros(shape)
+    top_grid = np.zeros(shape)
+
+    for i in range(len(z)):
+        coupled_grid[:, i] = np.interp(E_vacuum, E_coupled, coupled.averaged[:, i])
+        bottom_grid[:, i] = np.interp(E_vacuum, E_bottom, bottom.averaged[:, i])
+        top_grid[:, i] = np.interp(E_vacuum, E_top, top.averaged[:, i])
+
+    vacuum_subtracted = coupled_grid - bottom_grid - top_grid
+
+    limit = max(np.max(np.abs(fermi_subtracted)), np.max(np.abs(vacuum_subtracted)))
+    symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
+
+    fig, (ax_fermi, ax_vacuum) = plt.subplots(1, 2, figsize=(12, 5), layout="constrained")
+
+    mesh = ax_fermi.pcolormesh(z, E_fermi, fermi_subtracted * LDOS_WEIGHT, cmap="seismic", shading="auto", norm=symmetric_norm)
+    ax_fermi.set_title("Fermi-Aligned")
+    ax_fermi.set_xlabel(r"$z$ ($\AA$)")
+    ax_fermi.set_ylabel(r"$E-E_F$ (eV)")
+
+    mesh = ax_vacuum.pcolormesh(z, E_vacuum, vacuum_subtracted * LDOS_WEIGHT, cmap="seismic", shading="auto", norm=symmetric_norm)
+    ax_vacuum.set_title("Vacuum-Aligned")
+    ax_vacuum.set_xlabel(r"$z$ ($\AA$)")
+    ax_vacuum.set_ylabel(r"$E-V_{ref}$ (eV)")
+
+    fig.colorbar(mesh, ax=[ax_fermi, ax_vacuum], label=r"$\Delta LDOS$")
+    fig.suptitle(f"Subtracted LDOS, E-field={field}au, Correction: {vdw_scheme}")
+
+    plt.savefig(LDOS_DIR / f"LDOS_Subtracted_Comparison_{field}au_{vdw_scheme}.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
