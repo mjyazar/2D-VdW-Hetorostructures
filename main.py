@@ -1,5 +1,6 @@
 from config import *
-from graphene import GrapheneStructure
+from structures import *
+from systems import *
 from results import *
 import qe.pw as pw
 import qe.dos as dos
@@ -8,25 +9,15 @@ import qe.average as average
 import convergence
 import plotter as plot
 
-# Paths
-OUT_DIR = ROOT / "outputs"
-#MONOLAYER = OUT_DIR / "monolayer"
-#BILAYER = OUT_DIR / "bilayer"
 
-# Ensure folders exist
-OUT_DIR.mkdir(exist_ok=True)
-#MONOLAYER.mkdir(exist_ok=True)
-#BILAYER.mkdir(exist_ok=True)
-
-
-def run_calculations(structure, path, eamp, xc, label):
+def run_calculations(structure, system:SystemSettings, path, eamp, xc, label):
     
     print(f"\n{label} | {path.name.upper()} LAYER(S) COMPUTATIONS")
     print("-" * 35)
 
     if RUN_QE:
-        scf = pw.scf(structure, path, eamp, xc)
-        nscf = pw.nscf(structure, path, eamp, xc)
+        scf = pw.scf(structure, path, eamp, system.kgrid, xc)
+        nscf = pw.nscf(structure, path, eamp, system.kgrid_dense, xc)
     else: 
         scf = pw._read_output(path / "scf.pwo")
         nscf = pw._read_output(path / "nscf.pwo")
@@ -79,67 +70,71 @@ def run_calculations(structure, path, eamp, xc, label):
 
 
 def main():
-    graphene = GrapheneStructure()
-    
-    #energies = [0, 0.001, 0.005]
-    energies = [0, 0.001, 0.005]
-    
+
+    energies = [0]
     for eamp in energies:
-        
-        path = OUT_DIR /  f"field_{str(eamp)}"
+        for system in SYSTEMS:
+            system:SystemSettings  
+            structure = system.structure
+            
+            path = OUT_DIR / f"{system.name}" / f"field_{str(eamp)}"
 
-        print()
-        print("*" * 35)
-        print(f"E-field = {str(eamp)}au")
-        print("*" * 35)
+            print()
+            print("*" * 35)
+            print(f"E-field = {str(eamp)}au")
+            print("*" * 35)
 
-        print("\nCREATING GRAPHENE BILAYERS")
-        bilayer = graphene.bilayer()
-
-        if RUN_QE:
-            print("RELAXING COUPLED BILAYER")
-            relaxed_coupled = pw.relax(bilayer, path, eamp)
-        
-        else:
-            relaxed_coupled = pw._read_output(path / "relax.pwo")
-        
-        print("\nEXTRACTING FROZEN LAYERS")
-        isolated_bottom, isolated_top = graphene.isolate_bilayer(relaxed_coupled)
-        
-        if RUN_CONVERGENCE:
-            convergence.test_kgrid(relaxed_coupled, eamp, "scf")
-            convergence.test_kgrid(relaxed_coupled, eamp, "nscf")
-            convergence.test_ecutwfc(relaxed_coupled, eamp)
-        
-        # store pbe+d3 results as d3 and vdw results as c09
-        results = {}
-        for xc in XC:
-            if xc is None:
-                label = "d3"
+            print("\nCREATING GRAPHENE BILAYERS")
+            bilayer = structure.bilayer()
+            
+            if RUN_CONVERGENCE and eamp==0:  # only run for efield=0au
+                convergence.test_kgrid(bilayer, system, "scf")
+                convergence.test_kgrid(bilayer, system, "nscf")
+                convergence.test_ecutwfc(bilayer, system)
+            
+            if RUN_QE:
+                print("RELAXING COUPLED BILAYER")
+                relaxed_coupled = pw.relax(bilayer, path, system.kgrid, eamp)
+            
             else:
-                label = xc.split("-")[-1]
+                relaxed_coupled = pw._read_output(path / "relax.pwo")
             
-            PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / "coupled" 
-            PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / "bottom"
-            PATH_TOP = path / (f"PBE-{label}" if xc is None else xc) / "top"
+            print("\nEXTRACTING FROZEN LAYERS")
+            isolated_bottom, isolated_top = structure.isolate_bilayer(relaxed_coupled)
             
-            coupled = run_calculations(relaxed_coupled, PATH_COUPLED, eamp, xc, label)
-            bottom = run_calculations(isolated_bottom, PATH_BOTTOM, eamp, xc, label)
-            top = run_calculations(isolated_top, PATH_TOP, eamp, xc, label)
-            
-            result = Results(coupled, bottom, top)
-            results[label] = result
+            # store pbe+d3 results as d3 and vdw results as c09
+            results = {}
+            for xc in XC:
+                if xc is None:
+                    label = "d3"
+                else:
+                    label = xc.split("-")[-1]
+                
+                tag = f"{system.name}_{label}"
+                
+                PATH_COUPLED = path / (f"PBE-{label}" if xc is None else xc) / f"coupled" 
+                PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / f"bottom"
+                PATH_TOP = path / (f"PBE-{label}" if xc is None else xc) / f"top"
+                
+                coupled = run_calculations(relaxed_coupled, system, PATH_COUPLED, eamp, xc, label)
+                bottom = run_calculations(isolated_bottom, system, PATH_BOTTOM, eamp, xc, label)
+                top = run_calculations(isolated_top, system, PATH_TOP, eamp, xc, label)
+                
+                result = Results(coupled, bottom, top)
+                results[label] = result
 
-            plot.potential_individual(result, eamp, label)
-            plot.potential_subtracted(result, eamp, label)         
-            plot.charge_density_subtracted(result, eamp, label)
-            plot.dos_subtracted(result, eamp, label)
-            plot.dos_individual(result, eamp, label)
-            plot.ldos_subtracted(result, eamp, label)
-            plot.ldos_individual(result, eamp, label)
-        
-        pp.vdw_charge_difference(path, eamp)  # creates corresponding xsf file
-        plot.plot_vdw_charge_difference(results, eamp)
+                plot.potential_individual(result, eamp, tag)
+                plot.potential_subtracted(result, eamp, tag)         
+                plot.charge_density_subtracted(result, eamp, tag)
+                plot.dos_subtracted(result, eamp, tag)
+                plot.dos_individual(result, eamp, tag)
+                #plot.fermi_ldos_subtracted(result, eamp, tag)
+                #plot.vacuum_ldos_subtracted(result, eamp, tag)
+                plot.ldos_individual(result, eamp, tag)
+                plot.ldos_subtracted(result, eamp, tag)
+            
+            pp.vdw_charge_difference(path, eamp)  # creates corresponding xsf file
+            plot.plot_vdw_charge_difference(results, eamp, system.name)
 
 
 if __name__ == "__main__":
