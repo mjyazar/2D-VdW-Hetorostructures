@@ -74,7 +74,7 @@ def _write_input(path, structure, calculation, data_path, kpts, nbnd, prefix, ef
     Write QE input file using ASE
     """
     
-    write(path, structure, format="espresso-in", input_data=_input_data(calculation, data_path, nbnd, prefix, efield, xc, ecutwfc, ecutrho), pseudopotentials={"C": PSEUDO}, kpts=kpts)
+    write(path, structure, format="espresso-in", input_data=_input_data(calculation, data_path, nbnd, prefix, efield, xc, ecutwfc, ecutrho), pseudopotentials=PSEUDOPOTENTIALS, kpts=kpts)
 
 
 def _read_output(path, index=-1):
@@ -83,7 +83,7 @@ def _read_output(path, index=-1):
     return structure
 
 
-def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=ECUTWFC, ecutrho=ECUTRHO):
+def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=ECUTWFC, ecutrho=ECUTRHO, ):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -91,10 +91,8 @@ def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=EC
     input_path = path / f"{calculation}.pwi"
     output_path = path / f"{calculation}.pwo"
 
-    occupied = 2 * len(structure)
-
-    # 2 * (number of atoms in Atoms object) -> number of occupied bands    
-    nbnd = NSCF_NBND if calculation == "nscf" else 2 * len(structure) + SCF_EXTRA_BANDS
+    # 2 * (number of atoms in Atoms object) -> number of occupied bands
+    nbnd = _nbnd(calculation, structure)
     
     print(f"\nCREATING {input_path.name}")
     _write_input(input_path, structure, calculation, outdir, kpts, nbnd, path.name, efield, xc, ecutwfc, ecutrho)
@@ -108,20 +106,35 @@ def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=EC
     return output
 
 
-def relax(bilayer, path, eamp):
+
+def relax(bilayer, path, eamp, kgrid):
     
-    return _calculate("relax", bilayer, path, KGRID, eamp)
+    return _calculate("relax", bilayer, path, kgrid, eamp)
 
 
-def scf(relaxed, path, eamp, correction):
+def scf(relaxed, path, eamp, kgrid, correction):
     
-    return _calculate("scf", relaxed, path, KGRID, eamp, correction)
+    return _calculate("scf", relaxed, path, kgrid, eamp, correction)
 
 
-def nscf(relaxed, path, eamp, correction):
+def nscf(relaxed, path, eamp, kgrid, correction):
     
-    return _calculate("nscf", relaxed, path, KGRID_DENSE, eamp, correction)
+    return _calculate("nscf", relaxed, path, kgrid, eamp, correction)
+
+
+def _nbnd(calculation, structure):
+    electrons = 0
     
+    for atom in structure.get_chemical_symbols():
+        electrons += Z_VALENCE[atom]
+        
+    return int(electrons // 2 * (1 + EXTRA_BANDS[calculation]))
+
+
+def _kgrid(arg):
+    pass
+
+
 
 def band_path(structure, path=BANDPATH):
     """
