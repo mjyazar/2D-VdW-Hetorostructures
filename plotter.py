@@ -160,7 +160,7 @@ def charge_density_subtracted(results: Results, field, vdw_scheme):
     plt.close(fig)
 
 
-def plot_vdw_charge_difference(results, field):
+def plot_vdw_charge_difference(results, field, name):
     """
     Plot the plane averaged charge density difference between dn_c09 and dn_pbe, 
     where each is the subtracted charge density i.e. coupled - top - bottom
@@ -218,7 +218,7 @@ def plot_vdw_charge_difference(results, field):
 
     plt.legend()
     plt.tight_layout()
-    plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{field}au.png", dpi=300, bbox_inches="tight")
+    plt.savefig(CHARGE_DENSITY_DIR / f"vdW_Charge_Density_{name}_{field}au.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
