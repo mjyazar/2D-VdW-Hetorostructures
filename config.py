@@ -1,12 +1,33 @@
 from pathlib import Path
+
 ROOT = Path(__file__).resolve().parent
+
+
+OUT_DIR = ROOT / "outputs"
+FIG_DIR = OUT_DIR / "figures"
+POTENTIAL_DIR = FIG_DIR / "potential"
+CHARGE_DENSITY_DIR = FIG_DIR / "charge_density"
+DOS_DIR = FIG_DIR / "dos"
+LDOS_DIR = FIG_DIR / "ldos"
+CONV_FIG_DIR = ROOT / "convergence" / "figures"
+CONV_DATA_DIR = ROOT / "convergence" / "data"
+
+# Ensure folders exist
+OUT_DIR.mkdir(exist_ok=True)
+FIG_DIR.mkdir(exist_ok=True)
+POTENTIAL_DIR.mkdir(exist_ok=True)
+CHARGE_DENSITY_DIR.mkdir(exist_ok=True)
+DOS_DIR.mkdir(exist_ok=True)
+LDOS_DIR.mkdir(exist_ok=True)
+CONV_FIG_DIR.mkdir(parents=True, exist_ok=True)
+CONV_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
 """
 RUN
 False for efficient run if data from previous run present, True if running for the first time or want to create new files with new parameters
 """
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
@@ -18,7 +39,7 @@ RUN_CONVERGENCE = False
 RUNNER
 """
 NPROC = 16
-NK = 16  # split kgrid computations into n pools with
+NK = 4  # split kgrid computations into n pools with
 
 
 """
@@ -37,20 +58,32 @@ EV_TO_RY = 1 / RY_TO_EV
 
 
 """
-GRAPHENE
+STRUCTURE
 """
-LATTICE_CONSTANT = 2.46
+LATTICE_CONSTANT_GRAPHENE = 2.46
 VACUUM = 10.0  # QE requires 2D Coulomb truncation of the cell to have min z-length ~10.58 A
 INTERLAYER_DISTANCE = 3.35  # for bilayer (angstrom)
 STACKING = "AB"
+
+# https://onlinelibrary.wiley.com/doi/epdf/10.1002/andp.201400128
+LATTICE_CONSTANT_MOSE2 = 3.288
+LATTICE_CONSTANT_WSE2 = 3.260
+
+SE_HEIGHT_MOSE2 = 1.664#A
+SE_HEIGHT_WSE2  = 1.657#A
+
 
 
 """
 Carbon pseudopotential
 from https://sssp.materialscloud.org/pseudopotentials/PBE/efficiency
 """
-PSEUDO = "C.upf"
-# PSEUDO = "C.pbe-n-kjpaw_psl.1.0.0.UPF"
+PSEUDO_C = "C.us.pbe.z_4.uspp.gbrv.v1.2.upf"
+PSUEDO_Se = "Se.us.pbe.z_6.uspp.gbrv.v1.upf"
+PSEUDO_Mo = "Mo.paw.pbe.z_14.atompaw.jth.v1.1-std.upf"
+PSEUDO_W = "W.nc.pbe.z_14.oncvpsp4.spms.v1.upf"
+
+PSEUDOPOTENTIALS = {"C":PSEUDO_C, "Se":PSUEDO_Se, "Mo":PSEUDO_Mo, "W":PSEUDO_W}
 
 
 """
@@ -61,13 +94,12 @@ ECUTRHO = 4 * ECUTWFC
 CONV_THRESHOLD = 1.0e-8
 DEGAUSS_PW = 0.01
 SMEARING = "gauss"
-SCF_EXTRA_BANDS = 6  # number of unoccupied bands to run the calculations for nscf
-NSCF_NBND = 30
-NSCF_EXTRA_BANDS_PER_ATOM = 4  # number of unoccupied bands to run the calculations for nscf
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 KGRID = (15, 15, 1)  # scf
 KGRID_DENSE = (75, 75, 1)  # nscf
+Z_VALENCE = {"C": 4, "Se": 6, "Mo": 14, "W": 14}
+EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 1.0} 
 
 
 """
@@ -94,12 +126,17 @@ WINDOW = (-15, 15)
 PLOT_WINDOW_LDOS = (-10, 3)
 LDOS_GRID_DELTA_E = 0.01
 FIGSIZE_CHARGE_DENSITY = (5, 8)
+LDOS_WEIGHT = 5
 
 
 """
 CONVERGENCE
 """
 ECUTWFC_BOUND = 110
-SCF_BOUND = 30
-NSCF_UPPER_BOUND = 100
-NSCF_LOWER_BOUND = 24  # lower bound
+
+
+"""
+ALIGNMENT
+"""
+VACUUM_REFERENCE_WINDOW = (3, 6)
+Z_REFERENCE = 5
