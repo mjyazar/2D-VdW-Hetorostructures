@@ -83,7 +83,7 @@ def _read_output(path, index=-1):
     return structure
 
 
-def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=ECUTWFC, ecutrho=ECUTRHO, ):
+def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=ECUTWFC, ecutrho=ECUTRHO):
     
     path.mkdir(parents=True, exist_ok=True)
     
