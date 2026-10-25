@@ -94,7 +94,7 @@ def main():
             
             if RUN_QE:
                 print("RELAXING COUPLED BILAYER")
-                relaxed_coupled = pw.relax(bilayer, path, system.kgrid, eamp)
+                relaxed_coupled = pw.relax(bilayer, path, eamp, system.kgrid)
             
             else:
                 relaxed_coupled = pw._read_output(path / "relax.pwo")
