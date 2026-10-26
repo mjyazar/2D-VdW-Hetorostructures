@@ -315,7 +315,6 @@ def ldos_individual(results: Results, field, vdw_scheme):
     np.testing.assert_allclose(coupled.ldos.z, top.ldos.z)
     
     z = coupled.ldos.z
-    V = coupled.potential.averaged * RY_TO_EV - coupled.fermi_energy
     
     plots = [(coupled, "coupled"), (bottom, "bottom"), (top, "top")]
 
@@ -323,6 +322,7 @@ def ldos_individual(results: Results, field, vdw_scheme):
         fig, ax = plt.subplots()
         
         E = layer.ldos.energies
+        V = coupled.potential.averaged * RY_TO_EV - coupled.fermi_energy
 
         limit = np.max(np.abs(layer.ldos.averaged))
         symmetric_norm = TwoSlopeNorm(vmin=-limit, vcenter=0, vmax=limit)
