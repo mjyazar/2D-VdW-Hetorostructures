@@ -2,7 +2,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-
 OUT_DIR = ROOT / "outputs"
 FIG_DIR = OUT_DIR / "figures"
 POTENTIAL_DIR = FIG_DIR / "potential"
@@ -27,7 +26,7 @@ CONV_DATA_DIR.mkdir(parents=True, exist_ok=True)
 RUN
 False for efficient run if data from previous run present, True if running for the first time or want to create new files with new parameters
 """
-RUN_QE = False
+RUN_QE = True
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
@@ -96,8 +95,6 @@ DEGAUSS_PW = 0.01
 SMEARING = "gauss"
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
-KGRID = (15, 15, 1)  # scf
-KGRID_DENSE = (75, 75, 1)  # nscf
 Z_VALENCE = {"C": 4, "Se": 6, "Mo": 14, "W": 14}
 EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 1.0} 
 
