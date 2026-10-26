@@ -32,6 +32,9 @@ def run(process, input_path, output_path, cwd=None, nproc=NPROC):
             time.sleep(1)
 
     returncode = calculation.wait()
+    
+    if returncode != 0:
+        raise RuntimeError(f"{process} FAILED - CHECK {output_path}.")
 
     elapsed = int(time.perf_counter() - start)
     hours = elapsed // 3600
