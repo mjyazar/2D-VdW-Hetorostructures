@@ -38,7 +38,7 @@ RUN_CONVERGENCE = False
 RUNNER
 """
 NPROC = 16
-NK = 4  # split kgrid computations into n pools with
+NK = 2  # split kgrid computations into n pools with
 
 
 """
