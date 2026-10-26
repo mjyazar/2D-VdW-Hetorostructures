@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/main.py", line 2, in <module>
+    from structures import *
+  File "/home/ubuntu/projects/Graphene-Band-Structure-Quantum-Espresso/structures.py", line 1, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
