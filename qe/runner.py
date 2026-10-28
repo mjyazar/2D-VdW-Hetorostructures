@@ -8,6 +8,8 @@ def run(process, input_path, output_path, cwd=None, nproc=NPROC):
     Atomate the process of manually running pw.x << input_file.pwi >> output_file.pwo 
     in the terminal after creating an input file.
     """
+    if nproc is None:
+        nproc = NPROC if process == "pw.x" else 1
     
     with open(input_path, mode="r") as input_file, open(output_path, mode="w") as output_file:
         
@@ -15,7 +17,7 @@ def run(process, input_path, output_path, cwd=None, nproc=NPROC):
         
         command = ["mpirun", "-np", str(nproc), process]
         
-        if NK != 0 and process in ["pw.x", "pp.x"]:  # and if process == "pw.x" - potential crash culprit
+        if NK != 0 and process == "pw.x":  # and if process == "pw.x" - potential crash culprit
             command.extend(["-nk", str(NK)])
         
         calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd)
