@@ -97,18 +97,15 @@ class MetalDiselenide:
         self.height = height  # distance between metal and Se planes
         self.vacuum = vacuum
 
-
     def cell(self, dz=0.):
         """
         dz: z-distance between the lowest and highest atomic planes
-        """
-        
+        """ 
         return _hexagonal_cell(self.a, 2*self.vacuum + dz)
-
 
     def monolayer(self):
         """
-        Create monolayer MSe2 as Atoms object, centred at z=0.5
+        Create monolayer _Se2 as Atoms object, centred at z=0.5
         """
         
         dz = 2 * self.height
@@ -121,7 +118,38 @@ class MetalDiselenide:
         return Atoms(symbols=f"{self.metal}Se2", cell=self.cell(dz), scaled_positions=atomic_positions, pbc=True)
 
 
-class GrapheneMDBilayer:
+class MetalDisulfide:
+    def __init__(self, metal, lattice_constant, height, vacuum=VACUUM):
+        self.metal = metal
+        self.a = lattice_constant
+        self.height = height
+        self.vacuum = vacuum
+
+    def cell(self, dz=0.):
+        """
+        dz: z-distance between the lowest and highest atomic planes
+        """
+        return _hexagonal_cell(self.a, 2*self.vacuum + dz)
+
+    def monolayer(self):
+        """
+        Create monolayer _Se2 as Atoms object, centred at z=0.5
+        """
+        dz = 2 * self.height
+        h = self.height / (2*self.vacuum + dz)
+
+        atomic_positions = np.array([[1/3, 2/3, 0.5],      # metal
+                                     [2/3, 1/3, 0.5 - h],  # bottom S
+                                     [2/3, 1/3, 0.5 + h]]) # top S
+
+        return Atoms(
+            symbols=f"{self.metal}S2",
+            cell=self.cell(dz),
+            scaled_positions=atomic_positions,
+            pbc=True
+        )
+
+class GrapheneHeterostructure:
     def __init__(self, bottom, top, interlayer_dist=INTERLAYER_DISTANCE, vacuum=VACUUM):
         self.bottom = bottom.copy()
         self.top = top.copy()
@@ -163,11 +191,17 @@ class GrapheneMDBilayer:
         return bottom, top
 
 
+class MoS2(MetalDisulfide):
+    def __init__(self, vacuum=VACUUM):
+        super().__init__("Mo", LATTICE_CONSTANT_MOSE2, S_HEIGHT_MOS2, vacuum)
+class WS2(MetalDisulfide):
+    def __init__(self, vacuum=VACUUM):
+        super().__init__("W", LATTICE_CONSTANT_WSE2, S_HEIGHT_WS2, vacuum)
+
+
 class MoSe2(MetalDiselenide):
     def __init__(self, vacuum=VACUUM):
         super().__init__("Mo", LATTICE_CONSTANT_MOSE2, SE_HEIGHT_MOSE2, vacuum)
-
-
 class WSe2(MetalDiselenide):
     def __init__(self, vacuum=VACUUM):
         super().__init__("W", LATTICE_CONSTANT_WSE2, SE_HEIGHT_WSE2, vacuum)

@@ -13,15 +13,16 @@ class SystemSettings:
     conv_nscf: tuple
 
 graphene = Graphene()
-mose2 = MoSe2()
-wse2 = WSe2()
+mos2 = MoS2()
+ws2 = WS2()
 
-graphene_mose2 = GrapheneMDBilayer(graphene.monolayer(), mose2.monolayer())
-graphene_wse2 = GrapheneMDBilayer(graphene.monolayer(), wse2.monolayer())
+
+graphene_mos2 = GrapheneHeterostructure(graphene.monolayer(), mos2.monolayer())
+graphene_ws2 = GrapheneHeterostructure(graphene.monolayer(), ws2.monolayer())
 
 
 SYSTEMS = []
 
 SYSTEMS.append(SystemSettings("Graphene_Bilayer", "Graphene", "Graphene", graphene, (15, 15, 1), (75, 75, 1), (6, 30, 3), (24, 100, 6)))
-SYSTEMS.append(SystemSettings("Graphene_MoSe2", "Graphene", "MoSe2", graphene_mose2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
-SYSTEMS.append( SystemSettings("Graphene_WSe2", "Graphene", "WSe2", graphene_wse2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
+# SYSTEMS.append(SystemSettings("Graphene_MoS2", "Graphene", "MoS2", graphene_mos2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
+# SYSTEMS.append(SystemSettings("Graphene_WS2", "Graphene", "WS2", graphene_ws2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
