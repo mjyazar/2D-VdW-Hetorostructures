@@ -69,3 +69,25 @@ class Results:
     coupled: System
     bottom: System
     top: System
+
+
+@dataclass
+class Grid3D:
+    data: np.ndarray
+    origin: np.ndarray
+    cell: np.ndarray
+    atoms: object
+    
+    @property
+    def z(self):        
+        # number of grid points along z
+        nz = self.data.shape[2]
+
+        # total height of the simulation cell
+        Lz = self.cell[2, 2]
+        
+        # distance between neighbouring grid points
+        dz = Lz / nz
+
+        # physical z-position of each grid point
+        return self.origin[2] + np.arange(nz) * dz

@@ -8,9 +8,10 @@ import qe.pp as pp
 import qe.average as average
 import convergence
 import plotter as plot
+import fft as fft
 
 
-def run_calculations(structure, system:SystemSettings, path, eamp, xc, label):
+def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_mid):
     
     print(f"\n{label} | {path.name.upper()} LAYER(S) COMPUTATIONS")
     print("-" * 35)
@@ -46,7 +47,7 @@ def run_calculations(structure, system:SystemSettings, path, eamp, xc, label):
         dos_ = dos._read_output(path / "dos.out")
     
     if RUN_LDOS:
-        ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy)
+        ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy, z_mid)
         for f in (path / "data").glob("*.save/wfc*.dat"):
             f.unlink()
         # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
@@ -102,6 +103,10 @@ def main():
             print("\nEXTRACTING FROZEN LAYERS")
             isolated_bottom, isolated_top = structure.isolate_bilayer(relaxed_coupled)
             
+            z_bottom = isolated_bottom.positions[:, 2].max()
+            z_top = isolated_top.positions[:, 2].min()
+            z_mid = (z_bottom + z_top) / 2
+            
             # store pbe+d3 results as d3 and vdw results as c09
             results = {}
             for xc in XC:
@@ -116,13 +121,20 @@ def main():
                 PATH_BOTTOM = path / (f"PBE-{label}" if xc is None else xc) / f"bottom"
                 PATH_TOP = path / (f"PBE-{label}" if xc is None else xc) / f"top"
                 
-                coupled = run_calculations(relaxed_coupled, system, PATH_COUPLED, eamp, xc, label)
-                bottom = run_calculations(isolated_bottom, system, PATH_BOTTOM, eamp, xc, label)
-                top = run_calculations(isolated_top, system, PATH_TOP, eamp, xc, label)
+                coupled = run_calculations(relaxed_coupled, system, PATH_COUPLED, eamp, xc, label, z_mid)
+                bottom = run_calculations(isolated_bottom, system, PATH_BOTTOM, eamp, xc, label, z_mid)
+                top = run_calculations(isolated_top, system, PATH_TOP, eamp, xc, label, z_mid)
                 
                 result = Results(coupled, bottom, top)
                 results[label] = result
-
+                
+                if RUN_FFT_CHARGE:
+                    output_path = path / "fft" / f"charge_fft_{label}.npz"
+                    fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
+                                                PATH_BOTTOM / "charge.xsf",
+                                                PATH_TOP / "charge.xsf",
+                                                output_path)
+                
                 plot.potential_individual(result, eamp, tag)
                 plot.potential_subtracted(result, eamp, tag)         
                 plot.charge_density_subtracted(result, eamp, tag)
