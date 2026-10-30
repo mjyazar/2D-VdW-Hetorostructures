@@ -101,7 +101,7 @@ SMEARING = "gauss"
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 Z_VALENCE = {"C": 4, "Mo": 14, "W": 14, "S": 6, "Se": 6}
-EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 1.0} 
+EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 3.5} 
 
 
 """
