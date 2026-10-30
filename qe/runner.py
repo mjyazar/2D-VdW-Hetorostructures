@@ -3,7 +3,7 @@ import time
 
 from config import *
 
-def run(process, input_path, output_path, cwd=None, nproc=NPROC):
+def run(process, input_path, output_path, cwd=None, nproc=None):
     """
     Atomate the process of manually running pw.x << input_file.pwi >> output_file.pwo 
     in the terminal after creating an input file.
@@ -37,7 +37,7 @@ def run(process, input_path, output_path, cwd=None, nproc=NPROC):
     
     if returncode != 0:
         raise RuntimeError(f"{process} FAILED - CHECK {output_path}.")
-
+    
     elapsed = int(time.perf_counter() - start)
     hours = elapsed // 3600
     minutes = (elapsed % 3600) // 60
