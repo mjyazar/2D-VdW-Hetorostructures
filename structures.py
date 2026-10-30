@@ -193,10 +193,10 @@ class GrapheneHeterostructure:
 
 class MoS2(MetalDisulfide):
     def __init__(self, vacuum=VACUUM):
-        super().__init__("Mo", LATTICE_CONSTANT_MOSE2, S_HEIGHT_MOS2, vacuum)
+        super().__init__("Mo", LATTICE_CONSTANT_MOS2, S_HEIGHT_MOS2, vacuum)
 class WS2(MetalDisulfide):
     def __init__(self, vacuum=VACUUM):
-        super().__init__("W", LATTICE_CONSTANT_WSE2, S_HEIGHT_WS2, vacuum)
+        super().__init__("W", LATTICE_CONSTANT_WS2, S_HEIGHT_WS2, vacuum)
 
 
 class MoSe2(MetalDiselenide):
