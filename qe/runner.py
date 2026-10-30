@@ -9,7 +9,7 @@ def run(process, input_path, output_path, cwd=None, nproc=None):
     in the terminal after creating an input file.
     """
     if nproc is None:
-        nproc = NPROC if process == "pw.x" else 1
+        nproc = NPROC if process in ["pw.x", "pp.x"] else 1
     
     with open(input_path, mode="r") as input_file, open(output_path, mode="w") as output_file:
         
@@ -17,8 +17,12 @@ def run(process, input_path, output_path, cwd=None, nproc=None):
         
         command = ["mpirun", "-np", str(nproc), process]
         
-        if NK != 0 and process == "pw.x":  # and if process == "pw.x" - potential crash culprit
+        if process == "pw.x" and NK != 0:
             command.extend(["-nk", str(NK)])
+            
+        elif process == "pp.x":
+            # one k-point pool per process: LDOS is a sum over k
+            command.extend(["-nk", str(nproc)])
         
         calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd)
 
