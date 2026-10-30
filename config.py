@@ -39,7 +39,7 @@ RUN_CONVERGENCE = False
 RUNNER
 """
 NPROC = int(os.environ.get("QE_NPROC", "16"))
-NK = int(os.environ.get("QE_NK", "2"))  # split kgrid computations into n pools with
+NK = int(os.environ.get("QE_NK", "8"))  # split kgrid computations into n pools with
 
 
 """
