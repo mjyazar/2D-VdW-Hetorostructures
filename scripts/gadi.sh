@@ -7,7 +7,7 @@
 #PBS -l jobfs=200GB
 #PBS -l ncpus=48
 #PBS -l software=espresso
-#PBS -l storage=scratch/hh39+scratch/hh39
+#PBS -l storage=scratch/hh39
 #PBS -l wd
 
 set -euo pipefail
