@@ -2,10 +2,10 @@ import numpy as np
 from ase.io.cube import read_cube_data
 from ase.io.xsf import read_xsf, write_xsf
 
+from config import *
 from results import *
 import qe.runner as runner
-from config import *
-
+import fft as fft
 
 def _write_input(computation, input_path, outdir, intermediate_path, fileout, prefix, fermi_energy, iflag, output_format, window=WINDOW_LDOS):
     
@@ -93,12 +93,11 @@ def _read_xsf(path):
 def _read_output(path, output_format):
     
     if output_format == 5:
-        data, _, _ ,atoms = _read_xsf(path)
+        grid = fft.read_qe_xsf(path)
+        xy_averaged = np.mean(grid.data, axis=(0, 1))
 
-        xy_averaged = np.mean(data, axis=(0, 1))
-        z = _coordinates(data, atoms)
+        return grid.data, grid.atoms, xy_averaged, grid.z
 
-        return data, atoms, xy_averaged, z
 
     if output_format == 6:
         # data has shape (nx, ny, nz)
@@ -118,39 +117,68 @@ def _read_output(path, output_format):
         raise ValueError("Invalid output_format.")
     
 
-def _read_ldos(files_path, save_path):
+def _read_ldos(files_path, save_path, z_mid):
 
     # files = sorted(intermediate_path.parent.glob(f"{intermediate_path.name}[0-9]*.cube"))
     """
     files to read (i.e. final pp.x output) are named the same as the intermediate file names + .xsf suffix
-    
      - files_path.parent - gets the intermediate files path e.g. .../coupled/data
      - glob(f"{files_path.name}[0-9]*.xsf") - ldos.pp.dat[0-9]*.xsf, i.e. finds all ldos.pp.dat files and returns them
      - lambda function takes stem (i.e. file name without .xsf e.g. ldos.pp.dat12), strips the number with .removeprefix(files_path.name),
     and and sorts accordingly.
     """
-    files = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"),
+    
+    file_paths = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"),
                    key=lambda f: int(f.stem.removeprefix(files_path.name)))
-    file_count = len(files)
+    file_count = len(file_paths)
 
     averaged_ldos = []
     z = None
     atoms_ = None
     
-    for i, file in enumerate(files, start=1):
+    fft_data = None
+    fft_path = save_path / "ldos_interface_fft.npy"
+    
+    for i, file in enumerate(file_paths, start=1):
         print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True, end="")
         
         # data, atoms = read_cube_data(file)
+        grid = fft.read_qe_xsf(file)
         
-        with open(file, "r") as file_:
-            data, origin, span_vectors, atoms = read_xsf(file_, read_data=True)
+        data = grid.data
+        atoms = grid.atoms
         
+        # save data from the first file
         if i == 1:
-            z = _coordinates(data, atoms)
+            z = grid.z
+            origin_ = grid.origin
             atoms_ = atoms
             
+            if RUN_FFT_LDOS:
+                box_mask = ((z >= z_mid - INTERFACE_BOX_WIDTH / 2) & (z <= z_mid + INTERFACE_BOX_WIDTH / 2))
+                box_z = z[box_mask]
+                
+                print(f"\nINTERLAYER MIDPOINT: {z_mid:.3f} Å")
+                print(f"BOX WIDTH: {INTERFACE_BOX_WIDTH:.3f} Å")
+                print(f"Z POINTS IN BOX: {len(box_z)}")
+                print(f"ORIGINAL GRID SHAPE: {data.shape}")
+                print(f"FFT DATA SHAPE: ({file_count}, {data.shape[0]}, {data.shape[1]}, {len(box_z)})")
+                
+                # open_memmap() is used to store on disk instead of entirely in RAM as LDOS Fourier data is too large
+                fft_data = np.lib.format.open_memmap(fft_path, mode="w+", dtype=np.complex128, shape=(file_count, data.shape[0], data.shape[1], len(box_z)))
+
+        else:
+            np.testing.assert_allclose(grid.z, z)
+            np.testing.assert_allclose(grid.cell, atoms_.cell)
+            np.testing.assert_allclose(grid.origin, origin_)
+
+        # q_x = q_y = 0
         averaged_ldos.append(np.mean(data, axis=(0, 1)))
-        file.unlink()
+        
+        if RUN_FFT_LDOS:
+            box = data[:, :, box_mask]
+            fft_data[i - 1] = fft.fft(box)  # loop beings with i=1
+
     
     print()
     averaged_ldos = np.asarray(averaged_ldos)
@@ -161,6 +189,19 @@ def _read_ldos(files_path, save_path):
     np.savez(save_path / "ldos.npz", averaged=averaged_ldos, z=z, energies=energies)
     with open(save_path / "ldos_atoms.xsf", "w") as f:
         write_xsf(f, images=[atoms_])
+    
+    if RUN_FFT_LDOS:
+        fft_data.flush()  # write pending changes to disk (in case of crash)
+        np.savez(save_path / "ldos_interface_fft_meta.npz", 
+                 energies=energies, 
+                 cell=np.asarray(atoms_.cell), 
+                 origin=origin_, 
+                 z_mid=z_mid, 
+                 box_width=INTERFACE_BOX_WIDTH, 
+                 box_z=box_z)        
+        
+    for file in file_paths:
+        file.unlink()
     
     return LDOS(averaged=averaged_ldos, z=z, energies=energies, atoms=atoms_)
 
@@ -173,7 +214,7 @@ def _load_ldos(save_path):
     return LDOS(averaged=arrays["averaged"], z=arrays["z"], energies=arrays["energies"], atoms=atoms)
 
 
-def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
+def _calculate(computation, path, fileout, iflag=3, fermi_energy=None, z_mid=None):
     
     path.mkdir(parents=True, exist_ok=True)
     
@@ -218,13 +259,17 @@ def _calculate(computation, path, fileout, iflag=3, fermi_energy=None):
             if f.suffix != ".xsf":
                 f.unlink()
         # final files derive their names from intermediate files, so pass intermediate_path
-        return _read_ldos(intermediate_path, path), intermediate_path
+        return _read_ldos(intermediate_path, path, z_mid), intermediate_path
     
     print(f"READING {output_path.name}")
     return _read_output(output_path, output_format), intermediate_path
 
 
 def _coordinates(data, atoms):
+    """
+    Return grid of z-coordinates
+    """
+    
     number_of_z_points = data.shape[2]  # number of z grid points
     total_length = atoms.cell.lengths()[2]
 
@@ -248,8 +293,8 @@ def charge_density(path):
     return results, intermediate_path
 
 
-def ldos(path, fermi_energy):
-    ldos, intermediate_path = _calculate(3, path, "ldos", fermi_energy=fermi_energy)
+def ldos(path, fermi_energy, z_mid):
+    ldos, intermediate_path = _calculate(3, path, "ldos", fermi_energy=fermi_energy, z_mid=z_mid)
     
     return ldos, intermediate_path, ldos.energies
 
