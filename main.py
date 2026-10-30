@@ -128,12 +128,11 @@ def main():
                 result = Results(coupled, bottom, top)
                 results[label] = result
                 
-                if RUN_FFT_CHARGE:
-                    output_path = path / "fft" / f"charge_fft_{label}.npz"
-                    fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
-                                                PATH_BOTTOM / "charge.xsf",
-                                                PATH_TOP / "charge.xsf",
-                                                output_path)
+                fft_charge_output_path = path / "fft" / f"charge_fft_{label}.npz"
+                fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
+                                            PATH_BOTTOM / "charge.xsf",
+                                            PATH_TOP / "charge.xsf",
+                                            fft_charge_output_path, z_mid)
                 
                 plot.potential_individual(result, eamp, tag)
                 plot.potential_subtracted(result, eamp, tag)         

@@ -37,6 +37,8 @@ class LDOS:
     z: np.ndarray
     energies: np.ndarray
     atoms: Atoms
+    box_z: np.ndarray
+    fft: np.ndarray  # shape: (n_energies, n1, n2, n_z_box)
 
 @dataclass
 class LDOSAveraged:
