@@ -3,7 +3,8 @@ import numpy as np
 from ase.io.xsf import read_xsf
 
 from results import * 
-from config import INTERFACE_BOX_WIDTH
+from config import *
+
 
 def read_qe_xsf(path):
     with open(path, "r") as file:
@@ -55,7 +56,10 @@ def fft(data):
 
 
 def reciprocal_cell(cell):
-    return 2 * np.pi * np.linalg.inv(cell).T
+    """
+    A * B.T = 2pi * I --> B = 2pi * (A^-1).T
+    """
+    return 2 * np.pi * np.linalg.inv(np.asarray(cell)).T
 
 
 def interface_mask(z, z_mid, width=INTERFACE_BOX_WIDTH):
@@ -81,3 +85,78 @@ def save_induced_charge_fft(coupled_path, bottom_path, top_path, output_path, z_
     np.savez_compressed(output_path, coefficients=spectrum, cell=grid.cell, origin=grid.origin, box_z=grid.z[box_mask], z_mid=z_mid)
 
     return grid, spectrum
+
+
+def g_vectors(cell, shape):
+    """
+    Physical wavevector of every coefficient of the box FFT.
+    q_par = m1*b1 + m2*b2 and q_z = 2*pi*m3 / (n3*dz), with m = 0, 1, ..., -2, -1 (numpy FFT ordering).
+    Uses the cell vectors, so works for any primitive cell, supercell or twisted cell.
+    """
+    n1, n2 = shape
+    b = reciprocal_cell(cell)
+
+    m1 = np.fft.fftfreq(n1, d=1/n1)  # integer indices in FFT order
+    m2 = np.fft.fftfreq(n2, d=1/n2)
+    M1, M2 = np.meshgrid(m1, m2, indexing="ij")
+
+    # G = m1*b1 + m2*b2
+    G_inplane = M1[:, :, None] * b[0, :2] + M2[:, :, None] * b[1, :2]
+    
+    return G_inplane
+    # dz = box_z[1] - box_z[0]
+    # qz = 2 * np.pi * np.fft.fftfreq(n3, d=dz)  # box length n3*dz, not INTERFACE_BOX_WIDTH
+    
+    return G_inplane, qz
+
+
+def fourier_peaks(F, G, threshold=FFT_PEAK_THRESHOLD):
+    """
+    Extract G Fourier peaks
+    """
+    F_intensity = np.abs(F) ** 2
+    G_norm = np.linalg.norm(G, axis=-1)
+    
+    mask = G_norm > 0
+    relative = F_intensity / F_intensity[mask].max()
+    peaks = mask & (relative >= threshold)
+
+    peak_indices = np.argwhere(peaks)
+    # sort by intensity first (descending hence the minus) then magnitude of G peaks
+    # lexsort does not reorder your actual data directly
+    order = np.lexsort((G_norm[peaks], -F_intensity[peaks]))
+    ordered_peaks = peak_indices[order]
+    i1, i2 = ordered_peaks.T
+
+    return {"peaks": ordered_peaks,
+            "G": G[i1, i2],
+            "norm": G_norm[i1, i2],
+            "wavelength": 2 * np.pi / G_norm[i1, i2],
+            "intensity": F_intensity[i1, i2],
+            "relative": relative[i1, i2],
+            "phase": np.degrees(np.angle(F[i1, i2]))}
+    
+
+def on_lattice(G, layer_cell):
+    """
+    Returns true where G is a reciprocal lattice vector of a layer
+    i.e. evaluated n_i for a_i is and integer
+    """
+    a = np.asarray(layer_cell)[:2, :2]  # discards a3 of the cell
+    n = G @ a.T / (2 * np.pi)
+    
+    return np.all(np.abs(n - np.round(n)) < FFT_LATTICE_TOL, axis=-1)
+
+
+def g_origin(G, bottom_cell, top_cell):
+    """
+    Split G into four classes categorising which layer's reciprocal lattice they belong to
+    """
+    bottom = on_lattice(G, bottom_cell)
+    top = on_lattice(G, top_cell)
+    
+    return {"both": bottom & top,
+            "bottom": bottom & ~top,  # exclude 
+            "top": top & ~bottom,
+            "neither": ~bottom & ~top}
+    

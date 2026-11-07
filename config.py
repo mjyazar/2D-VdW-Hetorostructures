@@ -11,6 +11,7 @@ DOS_DIR = FIG_DIR / "dos"
 LDOS_DIR = FIG_DIR / "ldos"
 CONV_FIG_DIR = ROOT / "convergence" / "figures"
 CONV_DATA_DIR = ROOT / "convergence" / "data"
+FFT_DIR = FIG_DIR / "fft"
 
 # Ensure folders exist
 OUT_DIR.mkdir(exist_ok=True)
@@ -21,13 +22,14 @@ DOS_DIR.mkdir(exist_ok=True)
 LDOS_DIR.mkdir(exist_ok=True)
 CONV_FIG_DIR.mkdir(parents=True, exist_ok=True)
 CONV_DATA_DIR.mkdir(parents=True, exist_ok=True)
+FFT_DIR.mkdir(exist_ok=True)
 
 
 """
 RUN
 False for efficient run if data from previous run present, True if running for the first time or want to create new files with new parameters
 """
-RUN_QE = True
+RUN_QE = False
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
@@ -143,3 +145,11 @@ ALIGNMENT
 """
 VACUUM_REFERENCE_WINDOW = (3, 6)
 Z_REFERENCE = 5
+
+
+"""
+FOURIER ANALYSIS
+"""
+FFT_Q_DECIMALS = 4          # |q| rounded to this many decimals (1/Å) when grouping components into shells
+FFT_PEAK_THRESHOLD = 0.03   # a q≠0 component is a "peak" if its power > threshold × largest q≠0 power
+FFT_LATTICE_TOL = 1e-6      # tolerance on G*a/2pi being an int
