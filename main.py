@@ -129,10 +129,14 @@ def main():
                 results[label] = result
                 
                 fft_charge_output_path = path / "fft" / f"charge_fft_{label}.npz"
-                fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
-                                            PATH_BOTTOM / "charge.xsf",
-                                            PATH_TOP / "charge.xsf",
-                                            fft_charge_output_path, z_mid)
+                grid, spectrum = fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
+                                                             PATH_BOTTOM / "charge.xsf",
+                                                             PATH_TOP / "charge.xsf",
+                                                             fft_charge_output_path, z_mid)
+                
+                print("\nSPECTRUM:")
+                print(spectrum)
+                print(spectrum.shape)
                 
                 plot.potential_individual(result, eamp, tag)
                 plot.potential_subtracted(result, eamp, tag)         
@@ -143,6 +147,7 @@ def main():
                 #plot.vacuum_ldos_subtracted(result, eamp, tag)
                 plot.ldos_individual(result, eamp, tag)
                 plot.ldos_subtracted(result, eamp, tag)
+                plot.fft_plot(spectrum, fft_charge_output_path)
             
             pp.vdw_charge_difference(path, eamp)  # creates corresponding xsf file
             plot.plot_vdw_charge_difference(results, eamp, system.name)
