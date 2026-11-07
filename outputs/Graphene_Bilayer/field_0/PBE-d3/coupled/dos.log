@@ -1,0 +1,52 @@
+
+     Program DOS v.7.3 starts on 30Oct2026 at 20: 0:49 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on       1 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     174656 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading xml data from directory:
+
+     /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/coupled/data/coupled.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         535     535    163                94953    94953   15739
+ 
+     Using Slab Decomposition
+ 
+
+     negative rho (up, down):  1.871E-04 0.000E+00
+
+     Gaussian broadening (read from input): ngauss,degauss=   0    0.014700
+
+ 
+     DOS          :      0.69s CPU      0.76s WALL
+
+ 
+   This run was terminated on:  20: 0:49  30Oct2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
