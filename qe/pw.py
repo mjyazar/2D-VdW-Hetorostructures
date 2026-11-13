@@ -56,9 +56,10 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, xc, ecutwfc, ecutrho)
         """
         
         control["tefield"] = True  # saw-like potential simulating an E-field is added to the bare ionic potential
+        control["dipfield"] = True
         system["edir"] = 3  # z-direction
-        system["emaxpos"] = 0.9  # Position of the maximum of the saw-like potential along crystal axis edir
-        system["eopreg"] = 0.1  # Zone in the unit cell where the saw-like potential decreases
+        system["emaxpos"] = EMAXPOS  # Position of the maximum of the saw-like potential along crystal axis edir
+        system["eopreg"] = EOPREG  # Zone in the unit cell where the saw-like potential decreases
         system["eamp"] = efield
         
     namelists = {"control": control, "system": system, "electrons": electrons}
@@ -127,7 +128,7 @@ def _nbnd(calculation, structure):
     
     for atom in structure.get_chemical_symbols():
         electrons += Z_VALENCE[atom]
-        
+    
     return int(electrons // 2 * (1 + EXTRA_BANDS[calculation]))
 
 
