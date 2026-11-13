@@ -130,13 +130,21 @@ def _read_ldos(files_path, save_path, z_mid):
     file_paths = sorted(files_path.parent.glob(f"{files_path.name}[0-9]*.xsf"),
                    key=lambda f: int(f.stem.removeprefix(files_path.name)))
     file_count = len(file_paths)
-
+    
+    
+    expected_count = int(round((WINDOW_LDOS[1] - WINDOW_LDOS[0]) / DELTA_E_LDOS)) + 1
+    
+    indices = [int(file.stem.removeprefix(files_path.name)) for file in file_paths]
+    
+    if indices != list(range(1, expected_count + 1)):
+        raise ValueError("LDOS files are missing or inconsistent with the requested energy grid")
+    
     averaged_ldos = []
     z = None
     atoms_ = None
     
-    fft_data = None
-    fft_path = save_path / "ldos_interface_fft.npy"
+    box_data = None
+    box_path = save_path / "ldos_interface.npy"
     
     for i, file in enumerate(file_paths, start=1):
         print(f"\rREADING {file.name} [{i}/{file_count}]", flush=True, end="")
@@ -149,34 +157,36 @@ def _read_ldos(files_path, save_path, z_mid):
         
         # save data from the first file
         if i == 1:
-            
             z = grid.z
             origin_ = grid.origin
             atoms_ = atoms
+            reference_shape = data.shape
 
-            box_mask = fft.interface_mask(z, z_mid)
+            box_mask = fft.interface_mask(z, z_mid, LDOS_BOX_WIDTH)
             box_z = z[box_mask]
 
             print(f"\nINTERLAYER MIDPOINT: {z_mid:.3f} Å")
-            print(f"BOX WIDTH: {INTERFACE_BOX_WIDTH:.3f} Å")
+            print(f"BOX WIDTH: {LDOS_BOX_WIDTH:.3f} Å")
             print(f"Z POINTS IN BOX: {len(box_z)}")
             print(f"ORIGINAL GRID SHAPE: {data.shape}")
             print(f"FFT DATA SHAPE: ({file_count}, {data.shape[0]}, {data.shape[1]}, {len(box_z)})")
 
             # open_memmap() stores on disk instead of entirely in RAM as the LDOS Fourier data is large
-            fft_data = np.lib.format.open_memmap(fft_path, mode="w+", dtype=np.complex128, shape=(file_count, data.shape[0], data.shape[1], len(box_z)))
+            box_data = np.lib.format.open_memmap(box_path, mode="w+", dtype=np.float32, shape=(file_count, data.shape[0], data.shape[1], len(box_z)))
 
         else:
             np.testing.assert_allclose(grid.z, z)
             np.testing.assert_allclose(grid.cell, atoms_.cell)
             np.testing.assert_allclose(grid.origin, origin_)
+            
+            if data.shape != reference_shape:
+                raise ValueError("LDOS spatial grid changes between energies")
 
         # q_x = q_y = 0
         averaged_ldos.append(np.mean(data, axis=(0, 1)))
         
         box = data[:, :, box_mask]
-        fft_data[i - 1] = fft.fft(box)  # loop beings with i=1
-        
+        box_data[i - 1] = box  # loop begins with i=1        
     
     print()
     averaged_ldos = np.asarray(averaged_ldos)
@@ -184,12 +194,19 @@ def _read_ldos(files_path, save_path, z_mid):
     # shape[0] gets the number of rows i.e. the energy count
     energies = WINDOW_LDOS[0] + np.arange(averaged_ldos.shape[0]) * DELTA_E_LDOS
     
-    np.savez(save_path / "ldos.npz", averaged=averaged_ldos, z=z, energies=energies, box_z=box_z, z_mid=z_mid)
+    np.savez(save_path / "ldos.npz", 
+             averaged=averaged_ldos, 
+             z=z, 
+             energies=energies, 
+             box_z=box_z, 
+             z_mid=z_mid,
+             origin=origin_,
+             cell=np.asarray(atoms_.cell))
     
     with open(save_path / "ldos_atoms.xsf", "w") as f:
         write_xsf(f, images=[atoms_])
 
-    fft_data.flush()  # write pending changes to disk (in case of crash)
+    box_data.flush()  # write pending changes to disk (in case of crash)
 
     for file in file_paths:
         file.unlink()
@@ -198,17 +215,20 @@ def _read_ldos(files_path, save_path, z_mid):
 
 
 def _load_ldos(save_path):
-    arrays = np.load(save_path / "ldos.npz")
+    ldos_data = np.load(save_path / "ldos.npz")
     
-    with open(save_path / "ldos_atoms.xsf", "r") as f:
-        atoms = read_xsf(f)
+    origin=ldos_data["origin"] if "origin" in ldos_data.files else None
     
-    return LDOS(averaged=arrays["averaged"], 
-                z=arrays["z"], 
-                energies=arrays["energies"], 
+    with open(save_path / "ldos_atoms.xsf", "r") as file:
+        atoms = read_xsf(file)
+    
+    return LDOS(averaged=ldos_data["averaged"], 
+                z=ldos_data["z"], 
+                energies=ldos_data["energies"], 
                 atoms=atoms, 
-                box_z=arrays["box_z"],
-                fft=np.load(save_path / "ldos_interface_fft.npy", mmap_mode="r"))
+                box_z=ldos_data["box_z"],
+                box=np.load(save_path / "ldos_interface.npy", mmap_mode="r"),
+                origin=origin)
 
 
 def _calculate(computation, path, fileout, iflag=3, fermi_energy=None, z_mid=None):
