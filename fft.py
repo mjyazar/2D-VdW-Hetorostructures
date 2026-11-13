@@ -1,9 +1,10 @@
-from pathlib import Path
 import numpy as np
 from ase.io.xsf import read_xsf
+from scipy.ndimage import map_coordinates
 
 from results import * 
 from config import *
+from alignment import *
 
 
 def read_qe_xsf(path):
@@ -28,7 +29,7 @@ def read_qe_xsf(path):
     return Grid3D(data=data, origin=origin, cell=cell, atoms=atoms)
 
 
-def common_grid(coupled, bottom, top):
+def _commond_grid(coupled, bottom, top):
     """
     Construct a common grid for the coupled/uncoupledd
     Uncoupled data subtracted from coupled
@@ -74,7 +75,7 @@ def save_induced_charge_fft(coupled_path, bottom_path, top_path, output_path, z_
     bottom = read_qe_xsf(bottom_path)
     top = read_qe_xsf(top_path)
 
-    grid = common_grid(coupled, bottom, top)
+    grid = _commond_grid(coupled, bottom, top)
     
     box_mask = interface_mask(grid.z, z_mid)
     spectrum = fft(grid.data[:, :, box_mask])
@@ -135,7 +136,7 @@ def fourier_peaks(F, G, threshold=FFT_PEAK_THRESHOLD):
             "intensity": F_intensity[i1, i2],
             "relative": relative[i1, i2],
             "phase": np.degrees(np.angle(F[i1, i2]))}
-    
+
 
 def on_lattice(G, layer_cell):
     """
@@ -159,4 +160,46 @@ def g_origin(G, bottom_cell, top_cell):
             "bottom": bottom & ~top,  # exclude 
             "top": top & ~bottom,
             "neither": ~bottom & ~top}
+
+
+def sample_columns(data, positions):
+    """
+    Periodic grid data (n1, n2, nz) along vertical lines through in-plane points frac (n, 2) in cell fractions
+    Linear interpolation in-plane, grid planes in z. Returns (n, nz)
+    """
+    n1, n2, nz = data.shape
+    positions = np.asarray(positions, dtype=float)
     
+    # Create an array holding the coordinates of every sampling location
+    # (3, N_columns, Nz)
+    coords = np.empty((3, len(positions), nz))
+    coords[0] = positions[:, 0, None] * n1  # i
+    coords[1] = positions[:, 1, None] * n2  # j
+    coords[2] = np.arange(nz)               # k
+
+    # broadcast output shape (N_columns, Nz)
+    return map_coordinates(data, coords, order=1, mode="grid-wrap")
+
+
+def ripple_groups(G, classes, tol=FFT_G_TOL):
+    """
+    Group G by (|G|, lattice class): ripples with the same wavelength owned by the same layer(s)
+    Returns a list of (|G|, class, number of G) per group and the group index of every FFT seat (n1, n2)
+    """
+    names = list(classes)
+    code = np.zeros(G.shape[:2], dtype=int)
+    for i, mask in enumerate(classes.values()):
+        code[mask] = i
+
+    # shell number: sort |G| and start a new shell wherever |G| jumps by more than tol
+    norm = np.linalg.norm(G, axis=-1).ravel()
+    order = np.argsort(norm)
+    shell = np.empty(norm.size, dtype=int)
+    shell[order] = np.cumsum(np.diff(norm[order], prepend=norm[order][0]) > tol)
+
+    keys, index, counts = np.unique(np.stack([shell, code.ravel()], axis=1), axis=0,
+                                    return_inverse=True, return_counts=True)
+    groups = [(norm[shell == s].mean(), names[c], int(n)) for (s, c), n in zip(keys, counts)]
+
+    return groups, index.reshape(code.shape)
+
