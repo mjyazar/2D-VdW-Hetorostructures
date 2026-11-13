@@ -14,7 +14,7 @@ def _vacuum_reference(system, window=VACUUM_REFERENCE_WINDOW, z_reference=Z_REFE
     return slope, intercept
 
 
-def energy_axes(system):
+def _energy_axes(system):
     _, reference = _vacuum_reference(system)
     
     dos_energy = system.dos.energy - reference
@@ -23,3 +23,13 @@ def energy_axes(system):
     ldos_energy = (system.ldos.energies + system.fermi_energy - reference)
 
     return dos_energy, ldos_energy
+
+
+def ldos_energy_axis(system, reference):
+    if reference == "fermi":
+        return np.asarray(system.ldos.energies)
+    
+    if reference == "vacuum":
+        return _energy_axes(system)[1]
+
+    raise ValueError("REFERENCE MUST BE 'fermi' OR 'vacuum'")
