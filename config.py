@@ -37,7 +37,7 @@ RUN_LDOS = RUN_QE
 RUN_CONVERGENCE = False
 
 
-FIELDS = [0]
+FIELDS = [0, 0.005, 0.01]
 
 
 """
