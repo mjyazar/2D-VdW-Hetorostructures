@@ -5,24 +5,24 @@ ROOT = Path(__file__).resolve().parent
 
 OUT_DIR = ROOT / "outputs"
 FIG_DIR = OUT_DIR / "figures"
-POTENTIAL_DIR = FIG_DIR / "potential"
-CHARGE_DENSITY_DIR = FIG_DIR / "charge_density"
-DOS_DIR = FIG_DIR / "dos"
-LDOS_DIR = FIG_DIR / "ldos"
+POTENTIAL_FIG_DIR = FIG_DIR / "potential"
+CHARGE_DENSITY_FIG_DIR = FIG_DIR / "charge_density"
+DOS_FIG_DIR = FIG_DIR / "dos"
+LDOS_FIG_DIR = FIG_DIR / "ldos"
+FFT_FIG_DIR = FIG_DIR / "fft"
 CONV_FIG_DIR = ROOT / "convergence" / "figures"
 CONV_DATA_DIR = ROOT / "convergence" / "data"
-FFT_DIR = FIG_DIR / "fft"
 
 # Ensure folders exist
 OUT_DIR.mkdir(exist_ok=True)
 FIG_DIR.mkdir(exist_ok=True)
-POTENTIAL_DIR.mkdir(exist_ok=True)
-CHARGE_DENSITY_DIR.mkdir(exist_ok=True)
-DOS_DIR.mkdir(exist_ok=True)
-LDOS_DIR.mkdir(exist_ok=True)
+POTENTIAL_FIG_DIR.mkdir(exist_ok=True)
+CHARGE_DENSITY_FIG_DIR.mkdir(exist_ok=True)
+DOS_FIG_DIR.mkdir(exist_ok=True)
+LDOS_FIG_DIR.mkdir(exist_ok=True)
 CONV_FIG_DIR.mkdir(parents=True, exist_ok=True)
 CONV_DATA_DIR.mkdir(parents=True, exist_ok=True)
-FFT_DIR.mkdir(exist_ok=True)
+FFT_FIG_DIR.mkdir(exist_ok=True)
 
 
 """
@@ -35,6 +35,9 @@ RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
 RUN_LDOS = RUN_QE
 RUN_CONVERGENCE = False
+
+
+FIELDS = [0]
 
 
 """
@@ -105,16 +108,21 @@ BANDPATH = 'GMKG'
 Z_VALENCE = {"C": 4, "Mo": 14, "W": 14, "S": 6, "Se": 6}
 EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 3.5} 
 
+# sawtooth potential + dipole correction along z (cell fractions)
+# drop region [EMAXPOS, EMAXPOS + EOPREG] must lie in vacuum
+EMAXPOS = 0.9
+EOPREG = 0.1
+
 
 """
 pp.x
 """
 DEGAUSS_LDOS = 0.2
-WINDOW_LDOS = (-10, 10)
+WINDOW_LDOS = (-25, 10)
 DELTA_E_LDOS = 0.05
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 INTERFACE_BOX_WIDTH = 1.0
-
+LDOS_BOX_WIDTH = 6.0  # A, real-space LDOS stored in this box centred mid-gap
 
 """
 dos.x
@@ -122,16 +130,6 @@ dos.x
 DEGAUSS_DOS = DEGAUSS_LDOS * EV_TO_RY
 WINDOW_DOS = WINDOW_LDOS
 DELTA_E_DOS = 0.01
-
-
-"""
-PLOTTER
-"""
-WINDOW = WINDOW_LDOS
-PLOT_WINDOW_LDOS = (-10, 3)
-LDOS_GRID_DELTA_E = 0.01
-FIGSIZE_CHARGE_DENSITY = (5, 8)
-LDOS_WEIGHT = 5
 
 
 """
@@ -150,6 +148,21 @@ Z_REFERENCE = 5
 """
 FOURIER ANALYSIS
 """
-FFT_Q_DECIMALS = 4          # |q| rounded to this many decimals (1/Å) when grouping components into shells
+FFT_G_TOL = 1e-4  # 1/A, G whose lengths differ by less than this are in the same shell
 FFT_PEAK_THRESHOLD = 0.03   # a q≠0 component is a "peak" if its power > threshold × largest q≠0 power
 FFT_LATTICE_TOL = 1e-6      # tolerance on G*a/2pi being an int
+
+
+"""
+PLOTTER
+"""
+WINDOW = WINDOW_LDOS
+PLOT_WINDOW_LDOS = (-10, 2.5)
+LDOS_GRID_DELTA_E = 0.01
+FIGSIZE_CHARGE_DENSITY = (5, 8)
+LDOS_WEIGHT = 5
+
+SLICE_POINTS = 200  # samples along the in-plane line of a vertical slice
+COLUMN_TOL = 0.1  # A, an atom closer than this to the slice line is drawn on the slice
+DISTANCES = [3.0, 3.2, 3.4, 3.6, 3.8, 4.0, 4.5, 5.0]  # frozen-layer distance sweep (A); [] = no sweep
+FFT_PLOT_GROUPS = 4  # strongest ripple groups drawn in the LDOS Fourier plot
