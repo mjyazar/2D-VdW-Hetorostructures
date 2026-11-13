@@ -11,6 +11,7 @@ class SystemSettings:
     kgrid_dense: tuple
     conv_scf: tuple
     conv_nscf: tuple
+    slice_line: tuple = ((0., 0.), (1., 0.))  # in-plane start and end of the vertical slice, cell fractions
 
 graphene = Graphene()
 mos2 = MoS2()
@@ -23,6 +24,6 @@ graphene_ws2 = GrapheneHeterostructure(graphene.monolayer(), ws2.monolayer())
 
 SYSTEMS = []
 
-SYSTEMS.append(SystemSettings("Graphene_Bilayer", "Graphene", "Graphene", graphene, (15, 15, 1), (75, 75, 1), (6, 30, 3), (24, 100, 6)))
+SYSTEMS.append(SystemSettings("Graphene_Bilayer", "Graphene", "Graphene", graphene, (15, 15, 1), (75, 75, 1), (6, 30, 3), (24, 100, 6), ((0., 0.), (2., 1.))))
 # SYSTEMS.append(SystemSettings("Graphene_MoS2", "Graphene", "MoS2", graphene_mos2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
 # SYSTEMS.append(SystemSettings("Graphene_WS2", "Graphene", "WS2", graphene_ws2, (6, 6, 1), (21, 21, 1), (6, 12, 3), (12, 30, 6)))
