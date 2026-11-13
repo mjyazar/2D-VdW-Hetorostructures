@@ -3,15 +3,12 @@ from pathlib import Path
 from ase import Atoms
 import numpy as np
 
-
 @dataclass
 class Potential:
     data: np.ndarray
     atoms: object
     averaged: np.ndarray
     z: np.ndarray
-
-
 @dataclass
 class PotentialAveraged:
     coordinates: np.ndarray
@@ -24,7 +21,6 @@ class ChargeDensity:
     atoms: object
     averaged: np.ndarray
     z: np.ndarray
-
 @dataclass
 class ChargeDensityAveraged:
     coordinates: np.ndarray
@@ -38,7 +34,8 @@ class LDOS:
     energies: np.ndarray
     atoms: Atoms
     box_z: np.ndarray
-    fft: np.ndarray  # shape: (n_energies, n1, n2, n_z_box)
+    box: np.ndarray  # real-space LDOS in the interface box, (n_energies, n1, n2, n_z_box)
+    origin: np.ndarray | None = None
 
 @dataclass
 class LDOSAveraged:
@@ -53,6 +50,7 @@ class DOS:
     dos: np.ndarray
     idos: np.ndarray
 
+
 @dataclass
 class System:
     name: str
@@ -64,7 +62,6 @@ class System:
     charge_density: ChargeDensity
     dos: DOS
     ldos: LDOS
-
 
 @dataclass
 class Results:
