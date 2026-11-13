@@ -156,7 +156,10 @@ class GrapheneHeterostructure:
         self.interlayer_dist = interlayer_dist  # distance between facing atomic planes
         self.vacuum = vacuum
 
-    def bilayer(self):
+    def bilayer(self, interlayer_dist=None):
+        if interlayer_dist is None:
+            interlayer_dist = self.interlayer_dist
+            
         # match the a of top and bottom layers - numbers assume bottom layer is graphene
         bottom = self.bottom.repeat((4, 4, 1))
         top = self.top.repeat((3, 3, 1))
@@ -172,11 +175,11 @@ class GrapheneHeterostructure:
 
         # shift bottom /top layers such that min/max sits just above/below 10A of vacuum
         bottom.positions[:, 2] += self.vacuum - bottom.positions[:, 2].min()
-        top.positions[:, 2] += bottom_height + self.interlayer_dist
+        top.positions[:, 2] += bottom_height + interlayer_dist
         
         bilayer = bottom + top
         cell = bottom.cell.copy()
-        cell[2, 2] = 2*self.vacuum + bottom_height + self.interlayer_dist + top_height
+        cell[2, 2] = 2*self.vacuum + bottom_height + interlayer_dist + top_height
         bilayer.set_cell(cell)
         
         self.n_bottom = len(bottom)
