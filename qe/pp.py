@@ -34,10 +34,11 @@ spin_component = 0  ! spin averaged potential
         # 3 = local density of states at specific energy or grid of energies
         # (number of states per volume, in bohr^3, per energy unit, in Ry)
         # LDOS is plotted on grid [emin, emax] with spacing delta_e_ldos
+        # emax ensures count is exact (no rounding)
         elif computation == 3:
             input_file.write(f"""
 emin = {fermi_energy + window[0]}
-emax = {fermi_energy + window[1]}
+emax = {fermi_energy + window[1] + DELTA_E_LDOS / 2}
 delta_e = {DELTA_E_LDOS}
 degauss_ldos = {DEGAUSS_LDOS}
 use_gauss_ldos = .true.
