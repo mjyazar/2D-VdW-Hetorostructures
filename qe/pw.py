@@ -1,5 +1,6 @@
 from ase.io import write, read
 from pathlib import Path
+import math as math
 
 import qe.runner as runner
 from config import *
@@ -28,7 +29,8 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, xc, ecutwfc, ecutrho)
                              # = 8 electrons = 4 filled bands (spin degeneracy). Anything above is empty states
     
     electrons = {"conv_thr": CONV_THRESHOLD,  # max number of electronic SCF iterations treshold (Ry)
-                 "mixing_beta": 0.7,  # How much electron density updates with scf
+                 "mixing_beta": MIXING_BETA,  # How much electron density updates with scf
+                 "mixing_mode": MIXING_MODE,
                  "electron_maxstep": 200}  # maximum number of electronic SCF iterations allowed
     
     if xc is None:
@@ -129,7 +131,9 @@ def _nbnd(calculation, structure):
     for atom in structure.get_chemical_symbols():
         electrons += Z_VALENCE[atom]
     
-    return int(electrons // 2 * (1 + EXTRA_BANDS[calculation]))
+    occupied = math.ceil(electrons / 2)
+    
+    return max(math.ceil(occupied * (1 + EXTRA_BANDS[calculation])), occupied + MIN_EMPTY_BANDS[calculation])
 
 
 def _kgrid(arg):
