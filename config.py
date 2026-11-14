@@ -29,7 +29,7 @@ FFT_FIG_DIR.mkdir(exist_ok=True)
 RUN
 False for efficient run if data from previous run present, True if running for the first time or want to create new files with new parameters
 """
-RUN_QE = False
+RUN_QE = True
 RUN_POTENTIAL = RUN_QE
 RUN_CHARGE_DENSITY = RUN_QE
 RUN_DOS = RUN_QE
