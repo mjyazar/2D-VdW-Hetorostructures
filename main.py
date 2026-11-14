@@ -25,6 +25,11 @@ def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_
     
     fermi_energy = nscf.calc.get_fermi_level()
     
+    # check the LDOS window lies below the  lowest "top band", otherwise states are silently missing at the top of the window
+    top_band = min(max(nscf.calc.get_eigenvalues(kpt=k)) for k in range(len(nscf.calc.get_ibz_k_points())))
+    if top_band < fermi_energy + WINDOW_LDOS[1] + 3 * DEGAUSS_LDOS:
+        raise ValueError(f"TOO FEW NSCF BANDS: TOP BAND ONLY {top_band - fermi_energy:.2f} eV ABOVE E_F - RAISE EXTRA_BANDS['nscf']")
+    
     if RUN_POTENTIAL:
         potential, potential_pp_path = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
@@ -48,7 +53,7 @@ def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_
     
     if RUN_LDOS:
         ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy, z_mid)
-        for f in (path / "data").glob("*.save/wfc*.dat"):
+        for f in (path / "data").glob("*.save/wfc*"):
             f.unlink()
         # ldos_averaged = average.ldos(path, ldos_pp_path, energies)
     else:
@@ -155,6 +160,7 @@ def main():
                 plot.ldos_columns(result, eamp, tag)
                 plot.ldos_fourier(result, eamp, tag)
             
+            # run code till field_results[eamp] only if both xc present
             pp.vdw_charge_difference(path, eamp)  # creates corresponding xsf file
             plot.plot_vdw_charge_difference(results, eamp, system.name)
             
