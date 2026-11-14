@@ -33,6 +33,9 @@ def _input_data(calculation, outdir, nbnd, prefix, efield, xc, ecutwfc, ecutrho)
                  "mixing_mode": MIXING_MODE,
                  "electron_maxstep": 200}  # maximum number of electronic SCF iterations allowed
     
+    if calculation == "nscf":
+        electrons["diagonalization"] = "cg"
+        
     if xc is None:
         system["vdw_corr"] = str(VDW_CORR)  # only changes where the atoms relax to
     else:
