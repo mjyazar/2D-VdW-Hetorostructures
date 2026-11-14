@@ -11,12 +11,28 @@ import plotter as plot
 import fft as fft
 
 
+def _finished(output_path, phrase="JOB DONE"):
+    """
+    True if RESUME is on and this QE output file ends a completed run
+    """
+    return RESUME and output_path.exists() and phrase in output_path.read_text()
+
+
+def _saved(output_path, pw_ran):
+    """
+    True if RESUME is on - pw.x was not rerun in this call, and this pp.x output file already exists
+    """
+    return RESUME and not pw_ran and output_path.exists()  # only reuse pp.x output if pw.x was not rerun
+
+
 def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_mid):
     
     print(f"\n{label} | {path.name.upper()} LAYER(S) COMPUTATIONS")
     print("-" * 35)
+    
+    pw_ran = RUN_QE and not _finished(path / "nscf.pwo")
 
-    if RUN_QE:
+    if pw_ran:
         scf = pw.scf(structure, path, eamp, system.kgrid, xc)
         nscf = pw.nscf(structure, path, eamp, system.kgrid_dense, xc)
     else: 
@@ -29,8 +45,8 @@ def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_
     top_band = min(max(nscf.calc.get_eigenvalues(kpt=k)) for k in range(len(nscf.calc.get_ibz_k_points())))
     if top_band < fermi_energy + WINDOW_LDOS[1] + 3 * DEGAUSS_LDOS:
         raise ValueError(f"TOO FEW NSCF BANDS: TOP BAND ONLY {top_band - fermi_energy:.2f} eV ABOVE E_F - RAISE EXTRA_BANDS['nscf']")
-    
-    if RUN_POTENTIAL:
+
+    if RUN_POTENTIAL and not _saved(path / "potential.xsf", pw_ran):
         potential, potential_pp_path = pp.potential(path)
         # potential_averaged = average.potential(path, potential_pp_path)
     else:
@@ -38,20 +54,19 @@ def run_calculations(structure, system:SystemSettings, path, eamp, xc, label, z_
         data, atoms, xy_averaged, z = pp._read_output(path / "potential.xsf", 5)
         potential = Potential(data=data, atoms=atoms, averaged=xy_averaged, z=z)
 
-
-    if RUN_CHARGE_DENSITY:
+    if RUN_CHARGE_DENSITY and not _saved(path / "charge.xsf", pw_ran):
         charge, charge_pp_path = pp.charge_density(path)
     else:
         # charge, charge_pp_path = pp._read_output(path / "charge.cube", 6), path / "data" / f"charge.pp.dat"
         data, atoms, xy_averaged, z = pp._read_output(path / "charge.xsf", 5)
         charge = ChargeDensity(data=data, atoms=atoms, averaged=xy_averaged, z=z)
     
-    if RUN_DOS:
+    if RUN_DOS and not _saved(path / "dos.out", pw_ran):
         dos_ = dos.calculate(path, fermi_energy)
     else:
         dos_ = dos._read_output(path / "dos.out")
     
-    if RUN_LDOS:
+    if RUN_LDOS and not _saved(path / "ldos.npz", pw_ran):
         ldos, ldos_pp_path, energies = pp.ldos(path, fermi_energy, z_mid)
         for f in (path / "data").glob("*.save/wfc*"):
             f.unlink()
@@ -88,12 +103,14 @@ def main():
             convergence.test_kgrid(bilayer, system, "scf")
             convergence.test_kgrid(bilayer, system, "nscf")
             convergence.test_ecutwfc(bilayer, system)
-        
-        if RUN_QE:
+
+        # use relax.pwo if exists and converged
+        relax_output = system_path / "relax.pwo"
+        if RUN_QE and not _finished(relax_output, "bfgs converged"):
             print("RELAXING COUPLED BILAYER")
             relaxed_coupled = pw.relax(bilayer, system_path, 0, system.kgrid)
         else:
-            relaxed_coupled = pw._read_output(system_path / "relax.pwo")
+            relaxed_coupled = pw._read_output(relax_output)
         
         print("\nEXTRACTING FROZEN LAYERS")
         isolated_bottom, isolated_top = structure.isolate_bilayer(relaxed_coupled)

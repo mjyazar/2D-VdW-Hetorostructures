@@ -36,6 +36,8 @@ RUN_DOS = RUN_QE
 RUN_LDOS = RUN_QE
 RUN_CONVERGENCE = False
 
+RESUME = False  # True: skip calculations that already finished - continue interrupted run
+
 
 FIELDS = [0, 0.0025, 0.005] 
 
