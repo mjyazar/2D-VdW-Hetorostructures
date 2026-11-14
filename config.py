@@ -37,7 +37,7 @@ RUN_LDOS = RUN_QE
 RUN_CONVERGENCE = False
 
 
-FIELDS = [0, 0.005, 0.01]
+FIELDS = [0, 0.0025, 0.005] 
 
 
 """
@@ -45,7 +45,7 @@ RUNNER
 """
 NPROC = int(os.environ.get("QE_NPROC", "16"))
 NK = int(os.environ.get("QE_NK", "8"))  # split kgrid computations into n pools with
-
+PP_NK = int(os.environ.get("QE_PP_NK", NPROC))  # QE_PP_NK if set in the shell, otherwise NPROC
 
 """
 vdW SCHEME
@@ -106,7 +106,10 @@ SMEARING = "gauss"
 FORCE_CONVERGENCE_THRESHOLD = 0.001
 BANDPATH = 'GMKG'
 Z_VALENCE = {"C": 4, "Mo": 14, "W": 14, "S": 6, "Se": 6}
-EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 3.5} 
+EXTRA_BANDS = {"relax": 0.2, "scf": 0.2, "nscf": 0.5}
+MIN_EMPTY_BANDS = {"relax": 4, "scf": 4, "nscf": 16}
+MIXING_BETA = 0.3
+MIXING_MODE = "local-TF"  # Thomas-Fermi screening (for highly homogeneous systems)
 
 # sawtooth potential + dipole correction along z (cell fractions)
 # drop region [EMAXPOS, EMAXPOS + EOPREG] must lie in vacuum
@@ -119,7 +122,7 @@ pp.x
 """
 DEGAUSS_LDOS = 0.2
 WINDOW_LDOS = (-25, 10)
-DELTA_E_LDOS = 0.05
+DELTA_E_LDOS = 0.1
 VACUUM_LEVEL_TOLERANCE = 0.0000001  # do not go lower -> error
 INTERFACE_BOX_WIDTH = 1.0
 LDOS_BOX_WIDTH = 6.0  # A, real-space LDOS stored in this box centred mid-gap
