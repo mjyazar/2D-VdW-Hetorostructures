@@ -22,7 +22,7 @@ def run(process, input_path, output_path, cwd=None, nproc=None):
             
         elif process == "pp.x":
             # one k-point pool per process: LDOS is a sum over k
-            command.extend(["-nk", str(nproc)])
+            command.extend(["-nk", str(PP_NK)])
         
         calculation = subprocess.Popen(command, stdin=input_file, stdout=output_file, stderr=subprocess.STDOUT, cwd=cwd)
 
