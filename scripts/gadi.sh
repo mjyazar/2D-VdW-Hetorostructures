@@ -2,10 +2,10 @@
 #PBS -P hh39
 #PBS -N GrapheneHeterostructure
 #PBS -q normal
-#PBS -l walltime=08:00:00
-#PBS -l mem=190GB
+#PBS -l walltime=24:00:00
+#PBS -l mem=760GB
 #PBS -l jobfs=200GB
-#PBS -l ncpus=48
+#PBS -l ncpus=144
 #PBS -l software=espresso
 #PBS -l storage=scratch/hh39
 #PBS -l wd
