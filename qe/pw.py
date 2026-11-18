@@ -112,7 +112,6 @@ def _calculate(calculation, structure, path, kpts, efield=0, xc=None, ecutwfc=EC
     return output
 
 
-
 def relax(bilayer, path, eamp, kgrid):
     
     return _calculate("relax", bilayer, path, kgrid, eamp)
