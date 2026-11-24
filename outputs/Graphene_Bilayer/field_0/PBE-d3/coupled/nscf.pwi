@@ -8,7 +8,7 @@
    pseudo_dir       = '/scratch/hh39/mj0450/2D-VdW-Hetorostructures/pseudo'
 /
 &SYSTEM
-   nbnd             = 36
+   nbnd             = 24
    ecutwfc          = 90.0
    ecutrho          = 360.0
    occupations      = 'smearing'
@@ -22,7 +22,9 @@
 &ELECTRONS
    electron_maxstep = 200
    conv_thr         = 1e-08
-   mixing_beta      = 0.7
+   mixing_mode      = 'local-TF'
+   mixing_beta      = 0.3
+   diagonalization  = 'cg'
 /
 &IONS
 /
@@ -44,8 +46,8 @@ CELL_PARAMETERS angstrom
 0.00000000000000 0.00000000000000 23.34999874850822
 
 ATOMIC_POSITIONS angstrom
-C 0.0000000000 0.0000000000 9.9084089460  
-C 1.2300000000 0.7101408311 9.9096528593  
-C 1.2300000000 0.7101408311 13.4403471407  
-C 0.0000000000 1.4202816622 13.4415910540  
+C 0.0000000000 0.0000000000 9.9106453423  
+C 1.2300000000 0.7101408311 9.9122146277  
+C 1.2300000000 0.7101408311 13.4377853723  
+C 0.0000000000 1.4202816622 13.4393546577  
 

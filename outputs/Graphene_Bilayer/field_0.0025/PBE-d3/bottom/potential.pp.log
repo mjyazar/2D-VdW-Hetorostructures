@@ -1,0 +1,79 @@
+
+     Program POST-PROC v.7.3 starts on 14Nov2026 at 14: 5:33 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      48 processor cores
+     Number of MPI processes:                48
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     K-points division:     npool     =      48
+     156702 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading xml data from directory:
+
+     /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/PBE-d3/bottom/data/bottom.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         535     535    169                94953    94953   17491
+ 
+     Using Slab Decomposition
+ 
+
+     negative rho (up, down):  1.853E-04 0.000E+00
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole                0.0146 Ry au,          0.0370 Debye
+        Dipole field          0.0002 Ry au, 
+ 
+        E field amplitude [Ha a.u.]:  2.5000E-03
+        Potential amp.        0.1809 Ry
+        Total length         39.7126 bohr
+ 
+
+     Calling punch_plot, plot_num =  11
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole                0.0146 Ry au,          0.0370 Debye
+        Dipole field          0.0002 Ry au, 
+ 
+        E field amplitude [Ha a.u.]:  2.5000E-03
+        Potential amp.        0.1809 Ry
+        Total length         39.7126 bohr
+ 
+     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/PBE-d3/bottom/data/potential.pp.dat
+     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/PBE-d3/bottom/data/potential.pp.dat
+
+     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/PBE-d3/bottom/potential.xsf
+     Plot Type: 3D                     Output format: XCrySDen     
+ 
+     POST-PROC    :      1.11s CPU      1.22s WALL
+
+ 
+   This run was terminated on:  14: 5:34  14Nov2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

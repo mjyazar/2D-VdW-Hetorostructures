@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.3 starts on 30Oct2026 at 20: 0:45 
+     Program POST-PROC v.7.3 starts on 14Nov2026 at 13:13:16 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -16,7 +16,7 @@
 
      MPI processes distributed on     1 nodes
      K-points division:     npool     =      48
-     161625 MiB available memory on the printing compute node when the environment starts
+     166856 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -38,7 +38,7 @@
      Using Slab Decomposition
  
 
-     negative rho (up, down):  1.871E-04 0.000E+00
+     negative rho (up, down):  1.894E-04 0.000E+00
 
      Calling punch_plot, plot_num =   0
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/coupled/data/charge.pp.dat
@@ -47,10 +47,10 @@
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/coupled/charge.xsf
      Plot Type: 3D                     Output format: XCrySDen     
  
-     POST-PROC    :      0.59s CPU      0.71s WALL
+     POST-PROC    :      0.55s CPU      0.67s WALL
 
  
-   This run was terminated on:  20: 0:46  30Oct2026            
+   This run was terminated on:  13:13:17  14Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

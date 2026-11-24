@@ -2,14 +2,14 @@
    calculation      = 'relax'
    verbosity        = 'high'
    tprnfor          = .true.
-   outdir           = '/scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/data'
-   prefix           = 'field_0'
+   outdir           = '/scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/data'
+   prefix           = 'Graphene_Bilayer'
    forc_conv_thr    = 0.001
    disk_io          = 'low'
    pseudo_dir       = '/scratch/hh39/mj0450/2D-VdW-Hetorostructures/pseudo'
 /
 &SYSTEM
-   nbnd             = 9
+   nbnd             = 12
    ecutwfc          = 90.0
    ecutrho          = 360.0
    occupations      = 'smearing'
@@ -23,7 +23,8 @@
 &ELECTRONS
    electron_maxstep = 200
    conv_thr         = 1e-08
-   mixing_beta      = 0.7
+   mixing_mode      = 'local-TF'
+   mixing_beta      = 0.3
 /
 &IONS
    ion_dynamics     = 'bfgs'

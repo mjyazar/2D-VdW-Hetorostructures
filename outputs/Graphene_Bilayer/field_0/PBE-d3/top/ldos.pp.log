@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.3 starts on 30Oct2026 at 20:10:15 
+     Program POST-PROC v.7.3 starts on 14Nov2026 at 13:22:23 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -16,7 +16,7 @@
 
      MPI processes distributed on     1 nodes
      K-points division:     npool     =      48
-     163223 MiB available memory on the printing compute node when the environment starts
+     166919 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -42,2008 +42,1758 @@
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.60810 eV, broadening =   0.20000eV
+     Energy = -27.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat001
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.55810 eV, broadening =   0.20000eV
+     Energy = -27.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat002
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.50810 eV, broadening =   0.20000eV
+     Energy = -27.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat003
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.45810 eV, broadening =   0.20000eV
+     Energy = -27.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat004
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.40810 eV, broadening =   0.20000eV
+     Energy = -27.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat005
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.35810 eV, broadening =   0.20000eV
+     Energy = -27.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat006
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.30810 eV, broadening =   0.20000eV
+     Energy = -27.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat007
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.25810 eV, broadening =   0.20000eV
+     Energy = -26.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat008
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.20810 eV, broadening =   0.20000eV
+     Energy = -26.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat009
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.15810 eV, broadening =   0.20000eV
+     Energy = -26.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat010
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.10810 eV, broadening =   0.20000eV
+     Energy = -26.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat011
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.05810 eV, broadening =   0.20000eV
+     Energy = -26.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat012
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -12.00810 eV, broadening =   0.20000eV
+     Energy = -26.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat013
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.95810 eV, broadening =   0.20000eV
+     Energy = -26.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat014
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.90810 eV, broadening =   0.20000eV
+     Energy = -26.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat015
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.85810 eV, broadening =   0.20000eV
+     Energy = -26.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat016
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.80810 eV, broadening =   0.20000eV
+     Energy = -26.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat017
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.75810 eV, broadening =   0.20000eV
+     Energy = -25.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat018
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.70810 eV, broadening =   0.20000eV
+     Energy = -25.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat019
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.65810 eV, broadening =   0.20000eV
+     Energy = -25.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat020
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.60810 eV, broadening =   0.20000eV
+     Energy = -25.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat021
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.55810 eV, broadening =   0.20000eV
+     Energy = -25.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat022
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.50810 eV, broadening =   0.20000eV
+     Energy = -25.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat023
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.45810 eV, broadening =   0.20000eV
+     Energy = -25.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat024
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.40810 eV, broadening =   0.20000eV
+     Energy = -25.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat025
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.35810 eV, broadening =   0.20000eV
+     Energy = -25.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat026
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.30810 eV, broadening =   0.20000eV
+     Energy = -25.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat027
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.25810 eV, broadening =   0.20000eV
+     Energy = -24.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat028
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.20810 eV, broadening =   0.20000eV
+     Energy = -24.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat029
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.15810 eV, broadening =   0.20000eV
+     Energy = -24.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat030
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.10810 eV, broadening =   0.20000eV
+     Energy = -24.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat031
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.05810 eV, broadening =   0.20000eV
+     Energy = -24.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat032
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -11.00810 eV, broadening =   0.20000eV
+     Energy = -24.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat033
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.95810 eV, broadening =   0.20000eV
+     Energy = -24.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat034
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.90810 eV, broadening =   0.20000eV
+     Energy = -24.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat035
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.85810 eV, broadening =   0.20000eV
+     Energy = -24.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat036
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.80810 eV, broadening =   0.20000eV
+     Energy = -24.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat037
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.75810 eV, broadening =   0.20000eV
+     Energy = -23.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat038
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.70810 eV, broadening =   0.20000eV
+     Energy = -23.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat039
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.65810 eV, broadening =   0.20000eV
+     Energy = -23.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat040
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.60810 eV, broadening =   0.20000eV
+     Energy = -23.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat041
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.55810 eV, broadening =   0.20000eV
+     Energy = -23.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat042
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.50810 eV, broadening =   0.20000eV
+     Energy = -23.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat043
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.45810 eV, broadening =   0.20000eV
+     Energy = -23.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat044
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.40810 eV, broadening =   0.20000eV
+     Energy = -23.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat045
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.35810 eV, broadening =   0.20000eV
+     Energy = -23.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat046
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.30810 eV, broadening =   0.20000eV
+     Energy = -23.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat047
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.25810 eV, broadening =   0.20000eV
+     Energy = -22.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat048
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.20810 eV, broadening =   0.20000eV
+     Energy = -22.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat049
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.15810 eV, broadening =   0.20000eV
+     Energy = -22.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat050
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.10810 eV, broadening =   0.20000eV
+     Energy = -22.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat051
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.05810 eV, broadening =   0.20000eV
+     Energy = -22.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat052
 
      Calling punch_plot, plot_num =   3
 
-     Energy = -10.00810 eV, broadening =   0.20000eV
+     Energy = -22.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat053
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.95810 eV, broadening =   0.20000eV
+     Energy = -22.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat054
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.90810 eV, broadening =   0.20000eV
+     Energy = -22.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat055
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.85810 eV, broadening =   0.20000eV
+     Energy = -22.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat056
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.80810 eV, broadening =   0.20000eV
+     Energy = -22.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat057
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.75810 eV, broadening =   0.20000eV
+     Energy = -21.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat058
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.70810 eV, broadening =   0.20000eV
+     Energy = -21.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat059
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.65810 eV, broadening =   0.20000eV
+     Energy = -21.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat060
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.60810 eV, broadening =   0.20000eV
+     Energy = -21.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat061
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.55810 eV, broadening =   0.20000eV
+     Energy = -21.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat062
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.50810 eV, broadening =   0.20000eV
+     Energy = -21.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat063
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.45810 eV, broadening =   0.20000eV
+     Energy = -21.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat064
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.40810 eV, broadening =   0.20000eV
+     Energy = -21.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat065
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.35810 eV, broadening =   0.20000eV
+     Energy = -21.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat066
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.30810 eV, broadening =   0.20000eV
+     Energy = -21.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat067
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.25810 eV, broadening =   0.20000eV
+     Energy = -20.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat068
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.20810 eV, broadening =   0.20000eV
+     Energy = -20.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat069
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.15810 eV, broadening =   0.20000eV
+     Energy = -20.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat070
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.10810 eV, broadening =   0.20000eV
+     Energy = -20.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat071
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.05810 eV, broadening =   0.20000eV
+     Energy = -20.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat072
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -9.00810 eV, broadening =   0.20000eV
+     Energy = -20.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat073
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.95810 eV, broadening =   0.20000eV
+     Energy = -20.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat074
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.90810 eV, broadening =   0.20000eV
+     Energy = -20.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat075
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.85810 eV, broadening =   0.20000eV
+     Energy = -20.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat076
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.80810 eV, broadening =   0.20000eV
+     Energy = -20.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat077
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.75810 eV, broadening =   0.20000eV
+     Energy = -19.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat078
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.70810 eV, broadening =   0.20000eV
+     Energy = -19.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat079
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.65810 eV, broadening =   0.20000eV
+     Energy = -19.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat080
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.60810 eV, broadening =   0.20000eV
+     Energy = -19.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat081
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.55810 eV, broadening =   0.20000eV
+     Energy = -19.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat082
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.50810 eV, broadening =   0.20000eV
+     Energy = -19.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat083
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.45810 eV, broadening =   0.20000eV
+     Energy = -19.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat084
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.40810 eV, broadening =   0.20000eV
+     Energy = -19.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat085
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.35810 eV, broadening =   0.20000eV
+     Energy = -19.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat086
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.30810 eV, broadening =   0.20000eV
+     Energy = -19.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat087
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.25810 eV, broadening =   0.20000eV
+     Energy = -18.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat088
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.20810 eV, broadening =   0.20000eV
+     Energy = -18.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat089
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.15810 eV, broadening =   0.20000eV
+     Energy = -18.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat090
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.10810 eV, broadening =   0.20000eV
+     Energy = -18.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat091
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.05810 eV, broadening =   0.20000eV
+     Energy = -18.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat092
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -8.00810 eV, broadening =   0.20000eV
+     Energy = -18.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat093
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.95810 eV, broadening =   0.20000eV
+     Energy = -18.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat094
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.90810 eV, broadening =   0.20000eV
+     Energy = -18.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat095
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.85810 eV, broadening =   0.20000eV
+     Energy = -18.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat096
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.80810 eV, broadening =   0.20000eV
+     Energy = -18.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat097
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.75810 eV, broadening =   0.20000eV
+     Energy = -17.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat098
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.70810 eV, broadening =   0.20000eV
+     Energy = -17.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat099
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.65810 eV, broadening =   0.20000eV
+     Energy = -17.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat100
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.60810 eV, broadening =   0.20000eV
+     Energy = -17.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat101
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.55810 eV, broadening =   0.20000eV
+     Energy = -17.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat102
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.50810 eV, broadening =   0.20000eV
+     Energy = -17.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat103
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.45810 eV, broadening =   0.20000eV
+     Energy = -17.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat104
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.40810 eV, broadening =   0.20000eV
+     Energy = -17.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat105
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.35810 eV, broadening =   0.20000eV
+     Energy = -17.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat106
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.30810 eV, broadening =   0.20000eV
+     Energy = -17.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat107
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.25810 eV, broadening =   0.20000eV
+     Energy = -16.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat108
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.20810 eV, broadening =   0.20000eV
+     Energy = -16.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat109
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.15810 eV, broadening =   0.20000eV
+     Energy = -16.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat110
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.10810 eV, broadening =   0.20000eV
+     Energy = -16.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat111
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.05810 eV, broadening =   0.20000eV
+     Energy = -16.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat112
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -7.00810 eV, broadening =   0.20000eV
+     Energy = -16.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat113
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.95810 eV, broadening =   0.20000eV
+     Energy = -16.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat114
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.90810 eV, broadening =   0.20000eV
+     Energy = -16.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat115
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.85810 eV, broadening =   0.20000eV
+     Energy = -16.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat116
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.80810 eV, broadening =   0.20000eV
+     Energy = -16.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat117
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.75810 eV, broadening =   0.20000eV
+     Energy = -15.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat118
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.70810 eV, broadening =   0.20000eV
+     Energy = -15.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat119
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.65810 eV, broadening =   0.20000eV
+     Energy = -15.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat120
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.60810 eV, broadening =   0.20000eV
+     Energy = -15.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat121
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.55810 eV, broadening =   0.20000eV
+     Energy = -15.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat122
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.50810 eV, broadening =   0.20000eV
+     Energy = -15.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat123
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.45810 eV, broadening =   0.20000eV
+     Energy = -15.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat124
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.40810 eV, broadening =   0.20000eV
+     Energy = -15.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat125
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.35810 eV, broadening =   0.20000eV
+     Energy = -15.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat126
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.30810 eV, broadening =   0.20000eV
+     Energy = -15.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat127
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.25810 eV, broadening =   0.20000eV
+     Energy = -14.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat128
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.20810 eV, broadening =   0.20000eV
+     Energy = -14.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat129
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.15810 eV, broadening =   0.20000eV
+     Energy = -14.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat130
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.10810 eV, broadening =   0.20000eV
+     Energy = -14.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat131
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.05810 eV, broadening =   0.20000eV
+     Energy = -14.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat132
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -6.00810 eV, broadening =   0.20000eV
+     Energy = -14.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat133
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.95810 eV, broadening =   0.20000eV
+     Energy = -14.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat134
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.90810 eV, broadening =   0.20000eV
+     Energy = -14.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat135
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.85810 eV, broadening =   0.20000eV
+     Energy = -14.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat136
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.80810 eV, broadening =   0.20000eV
+     Energy = -14.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat137
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.75810 eV, broadening =   0.20000eV
+     Energy = -13.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat138
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.70810 eV, broadening =   0.20000eV
+     Energy = -13.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat139
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.65810 eV, broadening =   0.20000eV
+     Energy = -13.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat140
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.60810 eV, broadening =   0.20000eV
+     Energy = -13.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat141
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.55810 eV, broadening =   0.20000eV
+     Energy = -13.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat142
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.50810 eV, broadening =   0.20000eV
+     Energy = -13.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat143
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.45810 eV, broadening =   0.20000eV
+     Energy = -13.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat144
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.40810 eV, broadening =   0.20000eV
+     Energy = -13.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat145
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.35810 eV, broadening =   0.20000eV
+     Energy = -13.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat146
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.30810 eV, broadening =   0.20000eV
+     Energy = -13.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat147
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.25810 eV, broadening =   0.20000eV
+     Energy = -12.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat148
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.20810 eV, broadening =   0.20000eV
+     Energy = -12.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat149
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.15810 eV, broadening =   0.20000eV
+     Energy = -12.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat150
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.10810 eV, broadening =   0.20000eV
+     Energy = -12.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat151
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.05810 eV, broadening =   0.20000eV
+     Energy = -12.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat152
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -5.00810 eV, broadening =   0.20000eV
+     Energy = -12.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat153
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.95810 eV, broadening =   0.20000eV
+     Energy = -12.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat154
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.90810 eV, broadening =   0.20000eV
+     Energy = -12.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat155
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.85810 eV, broadening =   0.20000eV
+     Energy = -12.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat156
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.80810 eV, broadening =   0.20000eV
+     Energy = -12.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat157
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.75810 eV, broadening =   0.20000eV
+     Energy = -11.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat158
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.70810 eV, broadening =   0.20000eV
+     Energy = -11.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat159
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.65810 eV, broadening =   0.20000eV
+     Energy = -11.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat160
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.60810 eV, broadening =   0.20000eV
+     Energy = -11.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat161
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.55810 eV, broadening =   0.20000eV
+     Energy = -11.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat162
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.50810 eV, broadening =   0.20000eV
+     Energy = -11.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat163
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.45810 eV, broadening =   0.20000eV
+     Energy = -11.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat164
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.40810 eV, broadening =   0.20000eV
+     Energy = -11.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat165
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.35810 eV, broadening =   0.20000eV
+     Energy = -11.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat166
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.30810 eV, broadening =   0.20000eV
+     Energy = -11.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat167
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.25810 eV, broadening =   0.20000eV
+     Energy = -10.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat168
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.20810 eV, broadening =   0.20000eV
+     Energy = -10.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat169
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.15810 eV, broadening =   0.20000eV
+     Energy = -10.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat170
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.10810 eV, broadening =   0.20000eV
+     Energy = -10.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat171
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.05810 eV, broadening =   0.20000eV
+     Energy = -10.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat172
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -4.00810 eV, broadening =   0.20000eV
+     Energy = -10.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat173
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.95810 eV, broadening =   0.20000eV
+     Energy = -10.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat174
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.90810 eV, broadening =   0.20000eV
+     Energy = -10.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat175
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.85810 eV, broadening =   0.20000eV
+     Energy = -10.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat176
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.80810 eV, broadening =   0.20000eV
+     Energy = -10.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat177
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.75810 eV, broadening =   0.20000eV
+     Energy =  -9.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat178
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.70810 eV, broadening =   0.20000eV
+     Energy =  -9.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat179
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.65810 eV, broadening =   0.20000eV
+     Energy =  -9.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat180
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.60810 eV, broadening =   0.20000eV
+     Energy =  -9.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat181
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.55810 eV, broadening =   0.20000eV
+     Energy =  -9.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat182
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.50810 eV, broadening =   0.20000eV
+     Energy =  -9.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat183
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.45810 eV, broadening =   0.20000eV
+     Energy =  -9.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat184
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.40810 eV, broadening =   0.20000eV
+     Energy =  -9.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat185
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.35810 eV, broadening =   0.20000eV
+     Energy =  -9.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat186
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.30810 eV, broadening =   0.20000eV
+     Energy =  -9.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat187
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.25810 eV, broadening =   0.20000eV
+     Energy =  -8.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat188
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.20810 eV, broadening =   0.20000eV
+     Energy =  -8.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat189
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.15810 eV, broadening =   0.20000eV
+     Energy =  -8.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat190
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.10810 eV, broadening =   0.20000eV
+     Energy =  -8.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat191
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.05810 eV, broadening =   0.20000eV
+     Energy =  -8.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat192
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -3.00810 eV, broadening =   0.20000eV
+     Energy =  -8.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat193
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.95810 eV, broadening =   0.20000eV
+     Energy =  -8.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat194
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.90810 eV, broadening =   0.20000eV
+     Energy =  -8.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat195
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.85810 eV, broadening =   0.20000eV
+     Energy =  -8.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat196
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.80810 eV, broadening =   0.20000eV
+     Energy =  -8.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat197
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.75810 eV, broadening =   0.20000eV
+     Energy =  -7.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat198
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.70810 eV, broadening =   0.20000eV
+     Energy =  -7.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat199
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.65810 eV, broadening =   0.20000eV
+     Energy =  -7.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat200
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.60810 eV, broadening =   0.20000eV
+     Energy =  -7.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat201
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.55810 eV, broadening =   0.20000eV
+     Energy =  -7.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat202
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.50810 eV, broadening =   0.20000eV
+     Energy =  -7.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat203
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.45810 eV, broadening =   0.20000eV
+     Energy =  -7.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat204
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.40810 eV, broadening =   0.20000eV
+     Energy =  -7.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat205
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.35810 eV, broadening =   0.20000eV
+     Energy =  -7.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat206
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.30810 eV, broadening =   0.20000eV
+     Energy =  -7.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat207
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.25810 eV, broadening =   0.20000eV
+     Energy =  -6.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat208
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.20810 eV, broadening =   0.20000eV
+     Energy =  -6.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat209
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.15810 eV, broadening =   0.20000eV
+     Energy =  -6.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat210
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.10810 eV, broadening =   0.20000eV
+     Energy =  -6.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat211
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.05810 eV, broadening =   0.20000eV
+     Energy =  -6.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat212
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -2.00810 eV, broadening =   0.20000eV
+     Energy =  -6.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat213
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.95810 eV, broadening =   0.20000eV
+     Energy =  -6.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat214
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.90810 eV, broadening =   0.20000eV
+     Energy =  -6.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat215
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.85810 eV, broadening =   0.20000eV
+     Energy =  -6.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat216
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.80810 eV, broadening =   0.20000eV
+     Energy =  -6.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat217
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.75810 eV, broadening =   0.20000eV
+     Energy =  -5.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat218
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.70810 eV, broadening =   0.20000eV
+     Energy =  -5.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat219
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.65810 eV, broadening =   0.20000eV
+     Energy =  -5.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat220
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.60810 eV, broadening =   0.20000eV
+     Energy =  -5.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat221
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.55810 eV, broadening =   0.20000eV
+     Energy =  -5.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat222
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.50810 eV, broadening =   0.20000eV
+     Energy =  -5.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat223
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.45810 eV, broadening =   0.20000eV
+     Energy =  -5.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat224
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.40810 eV, broadening =   0.20000eV
+     Energy =  -5.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat225
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.35810 eV, broadening =   0.20000eV
+     Energy =  -5.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat226
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.30810 eV, broadening =   0.20000eV
+     Energy =  -5.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat227
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.25810 eV, broadening =   0.20000eV
+     Energy =  -4.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat228
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.20810 eV, broadening =   0.20000eV
+     Energy =  -4.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat229
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.15810 eV, broadening =   0.20000eV
+     Energy =  -4.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat230
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.10810 eV, broadening =   0.20000eV
+     Energy =  -4.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat231
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.05810 eV, broadening =   0.20000eV
+     Energy =  -4.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat232
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -1.00810 eV, broadening =   0.20000eV
+     Energy =  -4.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat233
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.95810 eV, broadening =   0.20000eV
+     Energy =  -4.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat234
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.90810 eV, broadening =   0.20000eV
+     Energy =  -4.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat235
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.85810 eV, broadening =   0.20000eV
+     Energy =  -4.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat236
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.80810 eV, broadening =   0.20000eV
+     Energy =  -4.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat237
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.75810 eV, broadening =   0.20000eV
+     Energy =  -3.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat238
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.70810 eV, broadening =   0.20000eV
+     Energy =  -3.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat239
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.65810 eV, broadening =   0.20000eV
+     Energy =  -3.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat240
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.60810 eV, broadening =   0.20000eV
+     Energy =  -3.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat241
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.55810 eV, broadening =   0.20000eV
+     Energy =  -3.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat242
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.50810 eV, broadening =   0.20000eV
+     Energy =  -3.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat243
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.45810 eV, broadening =   0.20000eV
+     Energy =  -3.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat244
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.40810 eV, broadening =   0.20000eV
+     Energy =  -3.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat245
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.35810 eV, broadening =   0.20000eV
+     Energy =  -3.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat246
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.30810 eV, broadening =   0.20000eV
+     Energy =  -3.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat247
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.25810 eV, broadening =   0.20000eV
+     Energy =  -2.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat248
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.20810 eV, broadening =   0.20000eV
+     Energy =  -2.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat249
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.15810 eV, broadening =   0.20000eV
+     Energy =  -2.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat250
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.10810 eV, broadening =   0.20000eV
+     Energy =  -2.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat251
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.05810 eV, broadening =   0.20000eV
+     Energy =  -2.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat252
 
      Calling punch_plot, plot_num =   3
 
-     Energy =  -0.00810 eV, broadening =   0.20000eV
+     Energy =  -2.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat253
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.04190 eV, broadening =   0.20000eV
+     Energy =  -2.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat254
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.09190 eV, broadening =   0.20000eV
+     Energy =  -2.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat255
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.14190 eV, broadening =   0.20000eV
+     Energy =  -2.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat256
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.19190 eV, broadening =   0.20000eV
+     Energy =  -2.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat257
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.24190 eV, broadening =   0.20000eV
+     Energy =  -1.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat258
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.29190 eV, broadening =   0.20000eV
+     Energy =  -1.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat259
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.34190 eV, broadening =   0.20000eV
+     Energy =  -1.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat260
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.39190 eV, broadening =   0.20000eV
+     Energy =  -1.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat261
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.44190 eV, broadening =   0.20000eV
+     Energy =  -1.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat262
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.49190 eV, broadening =   0.20000eV
+     Energy =  -1.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat263
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.54190 eV, broadening =   0.20000eV
+     Energy =  -1.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat264
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.59190 eV, broadening =   0.20000eV
+     Energy =  -1.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat265
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.64190 eV, broadening =   0.20000eV
+     Energy =  -1.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat266
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.69190 eV, broadening =   0.20000eV
+     Energy =  -1.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat267
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.74190 eV, broadening =   0.20000eV
+     Energy =  -0.90800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat268
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.79190 eV, broadening =   0.20000eV
+     Energy =  -0.80800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat269
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.84190 eV, broadening =   0.20000eV
+     Energy =  -0.70800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat270
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.89190 eV, broadening =   0.20000eV
+     Energy =  -0.60800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat271
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.94190 eV, broadening =   0.20000eV
+     Energy =  -0.50800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat272
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   0.99190 eV, broadening =   0.20000eV
+     Energy =  -0.40800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat273
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.04190 eV, broadening =   0.20000eV
+     Energy =  -0.30800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat274
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.09190 eV, broadening =   0.20000eV
+     Energy =  -0.20800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat275
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.14190 eV, broadening =   0.20000eV
+     Energy =  -0.10800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat276
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.19190 eV, broadening =   0.20000eV
+     Energy =  -0.00800 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat277
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.24190 eV, broadening =   0.20000eV
+     Energy =   0.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat278
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.29190 eV, broadening =   0.20000eV
+     Energy =   0.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat279
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.34190 eV, broadening =   0.20000eV
+     Energy =   0.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat280
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.39190 eV, broadening =   0.20000eV
+     Energy =   0.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat281
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.44190 eV, broadening =   0.20000eV
+     Energy =   0.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat282
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.49190 eV, broadening =   0.20000eV
+     Energy =   0.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat283
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.54190 eV, broadening =   0.20000eV
+     Energy =   0.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat284
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.59190 eV, broadening =   0.20000eV
+     Energy =   0.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat285
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.64190 eV, broadening =   0.20000eV
+     Energy =   0.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat286
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.69190 eV, broadening =   0.20000eV
+     Energy =   0.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat287
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.74190 eV, broadening =   0.20000eV
+     Energy =   1.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat288
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.79190 eV, broadening =   0.20000eV
+     Energy =   1.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat289
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.84190 eV, broadening =   0.20000eV
+     Energy =   1.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat290
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.89190 eV, broadening =   0.20000eV
+     Energy =   1.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat291
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.94190 eV, broadening =   0.20000eV
+     Energy =   1.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat292
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   1.99190 eV, broadening =   0.20000eV
+     Energy =   1.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat293
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.04190 eV, broadening =   0.20000eV
+     Energy =   1.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat294
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.09190 eV, broadening =   0.20000eV
+     Energy =   1.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat295
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.14190 eV, broadening =   0.20000eV
+     Energy =   1.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat296
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.19190 eV, broadening =   0.20000eV
+     Energy =   1.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat297
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.24190 eV, broadening =   0.20000eV
+     Energy =   2.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat298
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.29190 eV, broadening =   0.20000eV
+     Energy =   2.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat299
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.34190 eV, broadening =   0.20000eV
+     Energy =   2.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat300
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.39190 eV, broadening =   0.20000eV
+     Energy =   2.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat301
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.44190 eV, broadening =   0.20000eV
+     Energy =   2.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat302
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.49190 eV, broadening =   0.20000eV
+     Energy =   2.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat303
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.54190 eV, broadening =   0.20000eV
+     Energy =   2.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat304
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.59190 eV, broadening =   0.20000eV
+     Energy =   2.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat305
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.64190 eV, broadening =   0.20000eV
+     Energy =   2.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat306
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.69190 eV, broadening =   0.20000eV
+     Energy =   2.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat307
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.74190 eV, broadening =   0.20000eV
+     Energy =   3.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat308
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.79190 eV, broadening =   0.20000eV
+     Energy =   3.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat309
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.84190 eV, broadening =   0.20000eV
+     Energy =   3.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat310
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.89190 eV, broadening =   0.20000eV
+     Energy =   3.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat311
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.94190 eV, broadening =   0.20000eV
+     Energy =   3.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat312
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   2.99190 eV, broadening =   0.20000eV
+     Energy =   3.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat313
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.04190 eV, broadening =   0.20000eV
+     Energy =   3.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat314
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.09190 eV, broadening =   0.20000eV
+     Energy =   3.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat315
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.14190 eV, broadening =   0.20000eV
+     Energy =   3.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat316
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.19190 eV, broadening =   0.20000eV
+     Energy =   3.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat317
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.24190 eV, broadening =   0.20000eV
+     Energy =   4.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat318
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.29190 eV, broadening =   0.20000eV
+     Energy =   4.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat319
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.34190 eV, broadening =   0.20000eV
+     Energy =   4.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat320
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.39190 eV, broadening =   0.20000eV
+     Energy =   4.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat321
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.44190 eV, broadening =   0.20000eV
+     Energy =   4.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat322
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.49190 eV, broadening =   0.20000eV
+     Energy =   4.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat323
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.54190 eV, broadening =   0.20000eV
+     Energy =   4.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat324
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.59190 eV, broadening =   0.20000eV
+     Energy =   4.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat325
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.64190 eV, broadening =   0.20000eV
+     Energy =   4.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat326
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.69190 eV, broadening =   0.20000eV
+     Energy =   4.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat327
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.74190 eV, broadening =   0.20000eV
+     Energy =   5.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat328
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.79190 eV, broadening =   0.20000eV
+     Energy =   5.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat329
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.84190 eV, broadening =   0.20000eV
+     Energy =   5.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat330
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.89190 eV, broadening =   0.20000eV
+     Energy =   5.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat331
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.94190 eV, broadening =   0.20000eV
+     Energy =   5.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat332
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   3.99190 eV, broadening =   0.20000eV
+     Energy =   5.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat333
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.04190 eV, broadening =   0.20000eV
+     Energy =   5.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat334
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.09190 eV, broadening =   0.20000eV
+     Energy =   5.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat335
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.14190 eV, broadening =   0.20000eV
+     Energy =   5.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat336
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.19190 eV, broadening =   0.20000eV
+     Energy =   5.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat337
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.24190 eV, broadening =   0.20000eV
+     Energy =   6.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat338
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.29190 eV, broadening =   0.20000eV
+     Energy =   6.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat339
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.34190 eV, broadening =   0.20000eV
+     Energy =   6.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat340
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.39190 eV, broadening =   0.20000eV
+     Energy =   6.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat341
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.44190 eV, broadening =   0.20000eV
+     Energy =   6.49200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat342
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.49190 eV, broadening =   0.20000eV
+     Energy =   6.59200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat343
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.54190 eV, broadening =   0.20000eV
+     Energy =   6.69200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat344
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.59190 eV, broadening =   0.20000eV
+     Energy =   6.79200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat345
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.64190 eV, broadening =   0.20000eV
+     Energy =   6.89200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat346
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.69190 eV, broadening =   0.20000eV
+     Energy =   6.99200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat347
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.74190 eV, broadening =   0.20000eV
+     Energy =   7.09200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat348
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.79190 eV, broadening =   0.20000eV
+     Energy =   7.19200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat349
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.84190 eV, broadening =   0.20000eV
+     Energy =   7.29200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat350
 
      Calling punch_plot, plot_num =   3
 
-     Energy =   4.89190 eV, broadening =   0.20000eV
+     Energy =   7.39200 eV, broadening =   0.20000eV
      Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat351
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   4.94190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat352
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   4.99190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat353
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.04190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat354
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.09190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat355
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.14190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat356
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.19190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat357
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.24190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat358
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.29190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat359
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.34190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat360
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.39190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat361
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.44190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat362
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.49190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat363
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.54190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat364
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.59190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat365
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.64190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat366
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.69190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat367
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.74190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat368
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.79190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat369
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.84190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat370
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.89190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat371
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.94190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat372
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   5.99190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat373
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.04190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat374
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.09190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat375
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.14190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat376
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.19190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat377
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.24190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat378
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.29190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat379
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.34190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat380
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.39190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat381
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.44190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat382
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.49190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat383
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.54190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat384
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.59190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat385
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.64190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat386
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.69190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat387
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.74190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat388
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.79190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat389
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.84190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat390
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.89190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat391
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.94190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat392
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   6.99190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat393
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.04190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat394
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.09190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat395
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.14190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat396
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.19190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat397
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.24190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat398
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.29190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat399
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.34190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat400
-
-     Calling punch_plot, plot_num =   3
-
-     Energy =   7.39190 eV, broadening =   0.20000eV
-     Writing data to file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat401
      Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat001
 
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat001.xsf
@@ -3448,211 +3198,11 @@
 
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat351.xsf
      Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat352
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat352.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat353
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat353.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat354
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat354.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat355
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat355.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat356
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat356.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat357
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat357.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat358
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat358.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat359
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat359.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat360
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat360.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat361
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat361.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat362
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat362.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat363
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat363.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat364
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat364.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat365
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat365.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat366
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat366.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat367
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat367.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat368
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat368.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat369
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat369.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat370
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat370.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat371
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat371.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat372
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat372.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat373
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat373.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat374
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat374.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat375
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat375.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat376
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat376.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat377
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat377.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat378
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat378.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat379
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat379.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat380
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat380.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat381
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat381.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat382
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat382.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat383
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat383.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat384
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat384.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat385
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat385.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat386
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat386.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat387
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat387.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat388
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat388.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat389
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat389.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat390
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat390.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat391
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat391.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat392
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat392.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat393
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat393.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat394
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat394.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat395
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat395.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat396
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat396.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat397
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat397.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat398
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat398.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat399
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat399.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat400
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat400.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
-     Reading data from file  /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat401
-
-     Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0/PBE-d3/top/data/ldos.pp.dat401.xsf
-     Plot Type: 3D                     Output format: XCrySDen     
  
-     POST-PROC    :   1m58.48s CPU   2m35.67s WALL
+     POST-PROC    :   1m35.42s CPU   2m 9.16s WALL
 
  
-   This run was terminated on:  20:12:50  30Oct2026            
+   This run was terminated on:  13:24:32  14Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
