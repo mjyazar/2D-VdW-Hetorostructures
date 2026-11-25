@@ -71,19 +71,28 @@ def interface_mask(z, z_mid, width=INTERFACE_BOX_WIDTH):
 
 
 def save_induced_charge_fft(coupled_path, bottom_path, top_path, output_path, z_mid):
+    """
+    3D np.fft.fftn over (n1, n2, n_slab)
+    """
     coupled = read_qe_xsf(coupled_path)
     bottom = read_qe_xsf(bottom_path)
     top = read_qe_xsf(top_path)
 
     grid = _commond_grid(coupled, bottom, top)
     
-    box_mask = interface_mask(grid.z, z_mid)
-    spectrum = fft(grid.data[:, :, box_mask])
-    
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+    slab_idx = np.flatnonzero(interface_mask(grid.z, z_mid))
+    # average the slices in the interface over the height axis i.e. z
+    gap = grid.data[:, :, slab_idx].mean(axis=-1, dtype=float)  # (n1, n2), in e/bohr^3
+    n1, n2 = gap.shape
+    spectrum = np.fft.fft2(gap) / (n1 * n2) / BOHR_TO_ANGSTROM**3  # in e/A^3
+        
     # zip file with multiple arrays
-    np.savez_compressed(output_path, coefficients=spectrum, cell=grid.cell, origin=grid.origin, box_z=grid.z[box_mask], z_mid=z_mid)
+    np.savez(output_path, 
+             delta=spectrum.astype(np.complex64),
+             z_mid=z_mid)
+            # cell=grid.cell, 
+            # origin=grid.origin, 
+            # box_z=grid.z[box_mask], 
 
     return grid, spectrum
 
@@ -105,10 +114,11 @@ def g_vectors(cell, shape):
     G_inplane = M1[:, :, None] * b[0, :2] + M2[:, :, None] * b[1, :2]
     
     return G_inplane
+
     # dz = box_z[1] - box_z[0]
     # qz = 2 * np.pi * np.fft.fftfreq(n3, d=dz)  # box length n3*dz, not INTERFACE_BOX_WIDTH
     
-    return G_inplane, qz
+    # return G_inplane, qz
 
 
 def fourier_peaks(F, G, threshold=FFT_PEAK_THRESHOLD):
@@ -204,10 +214,9 @@ def ripple_groups(G, classes, tol=FFT_G_TOL):
     return groups, index.reshape(code.shape)
 
 
-def save_ldos_fourier(results, path):
+def save_ldos_fourier(results, path, z_mid):
     layers = {"coupled": results.coupled, "bottom": results.bottom, "top": results.top}
 
-    z_mid = (results.bottom.atoms.positions[:, 2].max() + results.top.atoms.positions[:, 2].min()) / 2
     z = results.coupled.ldos.box_z
     slab_idx = np.flatnonzero(interface_mask(z, z_mid))
     

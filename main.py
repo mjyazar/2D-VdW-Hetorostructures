@@ -150,19 +150,19 @@ def main():
                 result = Results(coupled, bottom, top)
                 results[label] = result
                 
-                ldos_fourier_path = system_path / "ldos_fourier"
-                ldos_fourier_path.mkdir(parents=True, exist_ok=True)
-                ldos_averaged_fourier = fft.save_ldos_fourier(result, ldos_fourier_path / f"ldos_fourier_{eamp}_{label}.npz")
+                ldos_fft_path = system_path / "ldos_fourier"
+                ldos_fft_path.mkdir(parents=True, exist_ok=True)
+                ldos_averaged_fourier = fft.save_ldos_fourier(result, 
+                                                              ldos_fft_path / f"ldos_fourier_{eamp}_{label}.npz", 
+                                                              z_mid)
                 
-                # fft_charge_output_path = path / "fft" / f"charge_fft_{label}.npz"
-                # grid, spectrum = fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf",
-                #                                              PATH_BOTTOM / "charge.xsf",
-                #                                              PATH_TOP / "charge.xsf",
-                #                                              fft_charge_output_path, z_mid)
-                # F, G = fft.inplane_spectrum(spectrum, grid.cell, grid.origin)
-                # box_mask = fft.interface_mask(grid.z, z_mid)
-                # box_mean = (grid.data[:, :, box_mask].mean() / BOHR_TO_ANGSTROM**3)
-                # np.testing.assert_allclose(F[0, 0], box_mean, rtol=1e-10, atol=1e-12)
+                charge_fft_path = system_path / "charge_fourier"
+                charge_fft_path.mkdir(parents=True, exist_ok=True)
+                grid, charge_fft_spectrum = fft.save_induced_charge_fft(PATH_COUPLED / "charge.xsf", 
+                                                                        PATH_BOTTOM / "charge.xsf", 
+                                                                        PATH_TOP / "charge.xsf", 
+                                                                        charge_fft_path / f"charge_gourier_{eamp}_{label}.npz", 
+                                                                        z_mid)
                 
                 plot.potential_individual(result, eamp, tag)
                 if eamp == 0:
