@@ -3,7 +3,7 @@
 #PBS -N GrapheneHeterostructure
 #PBS -q normal
 #PBS -l walltime=24:00:00
-#PBS -l mem=760GB
+#PBS -l mem=576GB
 #PBS -l jobfs=200GB
 #PBS -l ncpus=144
 #PBS -l software=espresso
