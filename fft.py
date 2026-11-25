@@ -203,3 +203,30 @@ def ripple_groups(G, classes, tol=FFT_G_TOL):
 
     return groups, index.reshape(code.shape)
 
+
+def save_ldos_fourier(results, path):
+    layers = {"coupled": results.coupled, "bottom": results.bottom, "top": results.top}
+
+    z_mid = (results.bottom.atoms.positions[:, 2].max() + results.top.atoms.positions[:, 2].min()) / 2
+    z = results.coupled.ldos.box_z
+    slab_idx = np.flatnonzero(interface_mask(z, z_mid))
+    
+    def gap_fft(layer):
+        box = np.take(layer.ldos.box, slab_idx, axis=-1)
+        gap = box.mean(axis=-1, dtype=float)
+        n1, n2 = gap.shape[1:]
+        return np.fft.fft2(gap, axes=(1, 2)) / (n1 * n2) / BOHR_TO_ANGSTROM**3 * RY_TO_EV
+
+    ldos_averaged_fourier = {name: gap_fft(layer) for name, layer in layers.items()}
+    ldos_averaged_fourier["delta"] = ldos_averaged_fourier["coupled"] - ldos_averaged_fourier["bottom"] - ldos_averaged_fourier["top"]
+
+    cell = results.coupled.atoms.cell.array
+    np.savez(path,
+             coupled=ldos_averaged_fourier["coupled"].astype(np.complex64),
+             bottom=ldos_averaged_fourier["bottom"].astype(np.complex64),
+             top=ldos_averaged_fourier["top"].astype(np.complex64),
+             delta=ldos_averaged_fourier["delta"].astype(np.complex64),
+             energies=results.coupled.ldos.energies,
+             z_mid=z_mid)
+
+    return ldos_averaged_fourier
