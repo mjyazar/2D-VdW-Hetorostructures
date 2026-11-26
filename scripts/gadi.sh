@@ -23,7 +23,7 @@ source /scratch/hh39/mj0450/venv/bin/activate
 export OMP_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
 export QE_NPROC="$PBS_NCPUS"
-export QE_NK=3
+export QE_NK=6
 export MPLBACKEND=Agg
 
 mkdir -p log
