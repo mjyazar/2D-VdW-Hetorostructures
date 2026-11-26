@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.3 starts on 14Nov2026 at 14:34:51 
+     Program POST-PROC v.7.3 starts on 25Nov2026 at 13:55:59 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,13 +10,13 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI & OpenMP), running on      48 processor cores
-     Number of MPI processes:                48
+     Parallel version (MPI & OpenMP), running on     144 processor cores
+     Number of MPI processes:               144
      Threads/MPI process:                     1
 
-     MPI processes distributed on     1 nodes
-     K-points division:     npool     =      48
-     154740 MiB available memory on the printing compute node when the environment starts
+     MPI processes distributed on     3 nodes
+     K-points division:     npool     =     144
+     152889 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -79,11 +79,11 @@
      Adding external electric field
 
      Computed dipole along edir(3) : 
-        Dipole                0.0374 Ry au,          0.0951 Debye
+        Dipole                0.0373 Ry au,          0.0948 Debye
         Dipole field          0.0006 Ry au, 
  
         E field amplitude [Ha a.u.]:  2.5000E-03
-        Potential amp.        0.1533 Ry
+        Potential amp.        0.1535 Ry
         Total length         39.7126 bohr
  
 
@@ -94,10 +94,10 @@
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/vdw-df2-c09/coupled/charge.xsf
      Plot Type: 3D                     Output format: XCrySDen     
  
-     POST-PROC    :      3.18s CPU      3.35s WALL
+     POST-PROC    :      2.69s CPU      2.95s WALL
 
  
-   This run was terminated on:  14:34:55  14Nov2026            
+   This run was terminated on:  13:56: 2  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

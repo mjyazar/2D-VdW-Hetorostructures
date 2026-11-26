@@ -1,5 +1,5 @@
 
-     Program DOS v.7.3 starts on 14Nov2026 at 16: 6:42 
+     Program DOS v.7.3 starts on 25Nov2026 at 15: 7:12 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -15,7 +15,7 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     169144 MiB available memory on the printing compute node when the environment starts
+     172630 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -37,7 +37,7 @@
      Using Slab Decomposition
  
 
-     negative rho (up, down):  1.863E-04 0.000E+00
+     negative rho (up, down):  1.862E-04 0.000E+00
 
 
      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,10 +89,10 @@
      Gaussian broadening (read from input): ngauss,degauss=   0    0.014700
 
  
-     DOS          :   1m 4.22s CPU   1m 4.83s WALL
+     DOS          :   1m 4.29s CPU   1m 4.64s WALL
 
  
-   This run was terminated on:  16: 7:47  14Nov2026            
+   This run was terminated on:  15: 8:17  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

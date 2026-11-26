@@ -4,8 +4,8 @@ outdir = "/scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/
 plot_num = 3
 filplot = "/scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.0025/PBE-d3/bottom/data/ldos.pp.dat"  ! QE intermediate 3D FFT i.e. real-space grid data
 
-emin = -27.6786
-emax = 7.3714
+emin = -27.6785
+emax = 7.3715
 delta_e = 0.1
 degauss_ldos = 0.2
 use_gauss_ldos = .true.

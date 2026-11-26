@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.3 starts on 14Nov2026 at 15:22: 5 
+     Program POST-PROC v.7.3 starts on 25Nov2026 at 14:32:54 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,13 +10,13 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI & OpenMP), running on      48 processor cores
-     Number of MPI processes:                48
+     Parallel version (MPI & OpenMP), running on     144 processor cores
+     Number of MPI processes:               144
      Threads/MPI process:                     1
 
-     MPI processes distributed on     1 nodes
-     K-points division:     npool     =      48
-     156026 MiB available memory on the printing compute node when the environment starts
+     MPI processes distributed on     3 nodes
+     K-points division:     npool     =     144
+     165834 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -43,7 +43,7 @@
      Adding external electric field
 
      Computed dipole along edir(3) : 
-        Dipole                0.0743 Ry au,          0.1888 Debye
+        Dipole                0.0744 Ry au,          0.1890 Debye
         Dipole field          0.0011 Ry au, 
  
         E field amplitude [Ha a.u.]:  5.0000E-03
@@ -56,7 +56,7 @@
      Adding external electric field
 
      Computed dipole along edir(3) : 
-        Dipole                0.0743 Ry au,          0.1888 Debye
+        Dipole                0.0744 Ry au,          0.1890 Debye
         Dipole field          0.0011 Ry au, 
  
         E field amplitude [Ha a.u.]:  5.0000E-03
@@ -69,10 +69,10 @@
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.005/PBE-d3/coupled/potential.xsf
      Plot Type: 3D                     Output format: XCrySDen     
  
-     POST-PROC    :      1.07s CPU      1.27s WALL
+     POST-PROC    :      1.57s CPU      1.74s WALL
 
  
-   This run was terminated on:  15:22: 6  14Nov2026            
+   This run was terminated on:  14:32:56  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

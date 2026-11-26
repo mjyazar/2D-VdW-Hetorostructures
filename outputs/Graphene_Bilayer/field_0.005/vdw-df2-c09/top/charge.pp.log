@@ -1,5 +1,5 @@
 
-     Program POST-PROC v.7.3 starts on 14Nov2026 at 16:37: 8 
+     Program POST-PROC v.7.3 starts on 25Nov2026 at 15:30:54 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,13 +10,13 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI & OpenMP), running on      48 processor cores
-     Number of MPI processes:                48
+     Parallel version (MPI & OpenMP), running on     144 processor cores
+     Number of MPI processes:               144
      Threads/MPI process:                     1
 
-     MPI processes distributed on     1 nodes
-     K-points division:     npool     =      48
-     158463 MiB available memory on the printing compute node when the environment starts
+     MPI processes distributed on     3 nodes
+     K-points division:     npool     =     144
+     167037 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -38,7 +38,7 @@
      Using Slab Decomposition
  
 
-     negative rho (up, down):  1.831E-04 0.000E+00
+     negative rho (up, down):  1.829E-04 0.000E+00
 
 
      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -79,11 +79,11 @@
      Adding external electric field
 
      Computed dipole along edir(3) : 
-        Dipole                0.0295 Ry au,          0.0751 Debye
-        Dipole field          0.0004 Ry au, 
+        Dipole                0.0296 Ry au,          0.0753 Debye
+        Dipole field          0.0005 Ry au, 
  
         E field amplitude [Ha a.u.]:  5.0000E-03
-        Potential amp.        0.3614 Ry
+        Potential amp.        0.3613 Ry
         Total length         39.7126 bohr
  
 
@@ -94,10 +94,10 @@
      Writing data to be plotted to file /scratch/hh39/mj0450/2D-VdW-Hetorostructures/outputs/Graphene_Bilayer/field_0.005/vdw-df2-c09/top/charge.xsf
      Plot Type: 3D                     Output format: XCrySDen     
  
-     POST-PROC    :      3.07s CPU      3.31s WALL
+     POST-PROC    :      2.74s CPU      2.99s WALL
 
  
-   This run was terminated on:  16:37:12  14Nov2026            
+   This run was terminated on:  15:30:57  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

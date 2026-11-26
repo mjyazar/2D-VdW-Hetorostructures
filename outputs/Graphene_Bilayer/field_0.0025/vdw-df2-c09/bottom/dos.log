@@ -1,5 +1,5 @@
 
-     Program DOS v.7.3 starts on 14Nov2026 at 14:51:16 
+     Program DOS v.7.3 starts on 25Nov2026 at 14: 8: 9 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -15,7 +15,7 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     171128 MiB available memory on the printing compute node when the environment starts
+     173705 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -89,10 +89,10 @@
      Gaussian broadening (read from input): ngauss,degauss=   0    0.014700
 
  
-     DOS          :   1m 3.76s CPU   1m 5.79s WALL
+     DOS          :   1m 3.73s CPU   1m 4.71s WALL
 
  
-   This run was terminated on:  14:52:22  14Nov2026            
+   This run was terminated on:  14: 9:14  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

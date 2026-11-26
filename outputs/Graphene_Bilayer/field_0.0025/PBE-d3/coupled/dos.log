@@ -1,5 +1,5 @@
 
-     Program DOS v.7.3 starts on 14Nov2026 at 13:50:43 
+     Program DOS v.7.3 starts on 25Nov2026 at 13:22:22 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -15,7 +15,7 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     167354 MiB available memory on the printing compute node when the environment starts
+     158191 MiB available memory on the printing compute node when the environment starts
  
 
      Reading xml data from directory:
@@ -42,21 +42,21 @@
      Adding external electric field
 
      Computed dipole along edir(3) : 
-        Dipole                0.0372 Ry au,          0.0944 Debye
+        Dipole                0.0372 Ry au,          0.0945 Debye
         Dipole field          0.0006 Ry au, 
  
         E field amplitude [Ha a.u.]:  2.5000E-03
-        Potential amp.        0.1537 Ry
+        Potential amp.        0.1536 Ry
         Total length         39.7126 bohr
  
 
      Gaussian broadening (read from input): ngauss,degauss=   0    0.014700
 
  
-     DOS          :      2.92s CPU      3.02s WALL
+     DOS          :      2.92s CPU      3.03s WALL
 
  
-   This run was terminated on:  13:50:46  14Nov2026            
+   This run was terminated on:  13:22:25  25Nov2026            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
