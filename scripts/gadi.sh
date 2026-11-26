@@ -24,6 +24,7 @@ export OMP_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
 export QE_NPROC="$PBS_NCPUS"
 export QE_NK=6
+export QE_PP_NK=48
 export MPLBACKEND=Agg
 
 mkdir -p log
